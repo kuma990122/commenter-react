@@ -1,8 +1,31 @@
 import * as constants from './constants';
 import {get} from '../../../utils/request';
 import {url} from '../../../utils/url';
+import { FETCH_DATA } from "../middleware/api";
+import { schema } from "../domains/products";
 
-const fetchLikesRequest = () =>({
+//用中间件可处理的action结构 
+const fetchLikes = (endpoint) => ({
+    [FETCH_DATA]: {
+      types: [
+        constants.FETCH_LIKES_REQUEST,
+        constants.FETCH_LIKES_SUCCESS,
+        constants.FETCH_LIKES_FAILURE
+      ],
+      endpoint,
+      schema
+    }
+})
+
+
+export const loadList = () =>{
+    return (dispatch, getState) => {
+        const endpoint = url.getProductList(0, 10)
+        return dispatch(fetchLikes(endpoint))
+      }
+}
+
+/*const fetchLikesRequest = () =>({
     type: constants.FETCH_LIKES_REQUEST
 })
 
@@ -30,5 +53,5 @@ export const loadList = () =>{
         }
        )
     }
-}
+}*/
 

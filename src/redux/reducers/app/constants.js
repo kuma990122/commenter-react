@@ -1,0 +1,1 @@
+export const CLEAR_ERROR = "APP/CLEAR_ERROR";

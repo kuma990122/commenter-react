@@ -3,13 +3,13 @@ import { combineReducers } from "redux";
 import domains from "./domains";
 import {reducer as HomeReducer} from "./home/reducer";
 import detail from "./detail";
-import app from "./app";
+import {reducer as AppReducer} from "./app/reducer";
 
 const rootReducer = combineReducers({
     domains,
     HomeReducer,
     detail,
-    app
+    AppReducer
 })
 
 export default rootReducer;
