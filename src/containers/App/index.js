@@ -7,6 +7,7 @@ import './style.css';
 
 class App extends Component {
   render() {
+    //destructuring the actions imported from reducer and assign the clearError function to appActions for sending the dispatch request
     const { error, appActions: { clearError }} = this.props;
     return (
       <div className="App">
@@ -16,12 +17,14 @@ class App extends Component {
   }
 }
 
+    //When initiate the component, get the state of ErrorDisplay to decide if we display it.
 const mapStateToProps = (state, props) =>{
    return {
     error: getError(state)
   };
 }
 
+//bind the clearError function with dispatch  
 const mapDispatchToProps = () =>{
    return {
     appActions: bindActionCreators(appActions, dispatch)

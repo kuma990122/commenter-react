@@ -9,3 +9,5 @@ import comments from "./comments";
 const mainReducer = combineReducers({
     products,shops,orders,comments
 })
+
+export default mainReducer;
