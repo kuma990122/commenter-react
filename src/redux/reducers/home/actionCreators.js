@@ -1,7 +1,7 @@
 import * as constants from './constants';
 import {get} from '../../../utils/request';
-import {url} from '../../../utils/url';
-import { FETCH_DATA } from "../middleware/api";
+import url from '../../../utils/url';
+import { FETCH_DATA } from '../../middleware/api';
 import { schema } from "../domains/products";
 
 //用中间件可处理的action结构 

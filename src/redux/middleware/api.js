@@ -3,7 +3,7 @@ import { get } from "../../utils/request"
 
 /*该API为store挂载的中间件
 拥有该标识的action将会通过中间件进行处理*/
-export const FETCH_DATA = 'FETCH DATA'
+export const FETCH_DATA = 'FETCH DATA';
 
 //执行网络请求
 const fetchData = (endpoint, schema) => {

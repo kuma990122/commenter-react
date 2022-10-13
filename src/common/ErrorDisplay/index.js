@@ -25,4 +25,4 @@ class ErrorDisplay extends Component {
       }
 }
 
-export default index;
+export default ErrorDisplay;
