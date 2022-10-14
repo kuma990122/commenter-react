@@ -1,10 +1,12 @@
 .category {
+    width: 50%;
     text-align: center;
     border-top: solid 1px #e1e1e1;
     border-bottom: solid 1px #e1e1e1;
     padding: 0 0 30px;
     color: #333;
     background-color: #fff;
+    transform: translate(50%, 0%);
   }
   
   .category__section {
@@ -16,8 +18,8 @@
   }
   
   .category__icon {
-    width: 150px;
-    height:150px;
+    width: 44px;
+    height:44px;
     margin: 0 auto 2px;
   }
   
