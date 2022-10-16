@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { dataSource } from './dataSource';
 import LikeItem from './LikeItem';
 import './style.css';
 import './button.css';
@@ -15,6 +14,7 @@ class LikeList extends Component {
     }
     render() {
         const {btnClicked} = this.state;
+        const {dataSource} = this.props;
         return (
             <div  className="likeList"> 
                <div className="likeList__list">
@@ -39,8 +39,10 @@ class LikeList extends Component {
     }
 
 componentDidUpdate(){
+   
    if(this.state.btnClicked){
      document.getElementById("more").innerHTML = "View All";
+     this.props.fetchData();
    }
 }
   handleBtnClick(){

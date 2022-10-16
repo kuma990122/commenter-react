@@ -3,6 +3,7 @@ import {get} from '../../../utils/request';
 import url from '../../../utils/url';
 import { FETCH_DATA } from '../../middleware/api';
 import { schema } from "../domains/products";
+import * as urlParams from './requestConst';
 
 //用中间件可处理的action结构 
 const fetchLikes = (endpoint) => ({
@@ -17,41 +18,36 @@ const fetchLikes = (endpoint) => ({
     }
 })
 
+const fetchDiscounts = endpoint => ({
+    [FETCH_DATA]: {
+      types: [
+        constants.FETCH_DISCOUNTS_REQUEST,
+        constants.FETCH_DISCOUNTS_SUCCESS,
+        constants.FETCH_DISCOUNTS_FAILURE
+      ],
+      endpoint,
+      schema
+    }
+  });
+
 
 export const loadList = () =>{
     return (dispatch, getState) => {
-        const endpoint = url.getProductList(0, 10)
+        const {pageCount} = getState().HomeReducer.likesReducer;
+        const rowIndex = pageCount * urlParams.params.PAGE_SIZE_LIKES;
+        const endpoint = url.getProductList(urlParams.params.PATH_LIKES, rowIndex, urlParams.params.PAGE_SIZE_LIKES); 
         return dispatch(fetchLikes(endpoint))
       }
 }
 
-/*const fetchLikesRequest = () =>({
-    type: constants.FETCH_LIKES_REQUEST
-})
-
-const fetchLikesSuccess = (data) =>({
-    type: constants.FETCH_LIKES_SUCCESS,
-    data
-})
-
-const fetchLikesFailure = (error) =>({
-    type: constants.FETCH_LIKES_REQUEST,
-    error
-})
-
-
-//The action for loading the main page recommendation list
-export const loadList = () =>{
-    return (dispatch,getState) =>{
-       dispatch(fetchLikesRequest());
-       return get(url.getProductList(0,10)).then(
-        data => {
-            dispatch(fetchLikesSuccess(data))
-        },
-        error => {
-            dispatch(fetchLikesFailure(error))
-        }
-       )
-    }
-}*/
+export const loadDiscounts = () => {
+    return (dispatch, getState) => {
+        const endpoint = url.getProductList(
+          constants.params.PATH_DISCOUNTS,
+          0,
+          constants.params.PAGE_SIZE_DISCOUNTS
+        );
+        return dispatch(fetchDiscounts(endpoint));
+      };
+}
 
