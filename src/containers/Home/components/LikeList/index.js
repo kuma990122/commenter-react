@@ -39,16 +39,16 @@ class LikeList extends Component {
     }
 
 componentDidUpdate(){
-   
    if(this.state.btnClicked){
      document.getElementById("more").innerHTML = "View All";
-     this.props.fetchData();
+    //  this.props.fetchData();
    }
 }
   handleBtnClick(){
      this.setState({
         btnClicked:true
      })
+     this.props.fetchData();
   }
 }
 

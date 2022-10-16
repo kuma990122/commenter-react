@@ -1,16 +1,17 @@
 //Capsulating the HTTP Request, for later using for creating actions
-
+import axios from 'axios'
 const headers = new Headers({
    "Accept": "application/json",
    "Content-Type": "application/json"
 })
 
 function get(url){
-    return fetch(url,{
+    return axios(url,{
         method: "GET",
         headers: headers
     }).then(response =>{
-        handleResponse(url,response);
+        const data = handleResponse(url,response);
+        return Promise.resolve(data)
     }).catch(err => {
         console.error(`Request failed. Url=${url}. Message=${err}`)
         return Promise.reject({error:{message:"Request failed"}})
@@ -18,7 +19,7 @@ function get(url){
 }
 
 function post(url,data){
-    return fetch(url,{
+    return axios(url,{
         method: "POST",
         headers: headers,
         body: data 
@@ -32,7 +33,7 @@ function post(url,data){
 
 function handleResponse(url,response){
     if(response.status === 200){
-        return response.json();
+        return response.data;
     }else{
         console.error(`Request failed. Url=${url}}`)
         return Promise.reject({error:{message:"Request failed due to server error"}})
