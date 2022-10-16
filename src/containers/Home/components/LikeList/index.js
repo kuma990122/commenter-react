@@ -25,8 +25,7 @@ class LikeList extends Component {
                         return( 
                            <LikeItem key={index} data={item}/>
                         )
-                        }
-                  })
+                        }})
                   }
                 </Slider>
                 </div>
@@ -37,18 +36,18 @@ class LikeList extends Component {
             </div>
         );
     }
-
 componentDidUpdate(){
    if(this.state.btnClicked){
      document.getElementById("more").innerHTML = "View All";
-    //  this.props.fetchData();
    }
 }
-  handleBtnClick(){
+  handleBtnClick(){ 
+     if(!this.state.btnClicked){
+     this.props.fetchData();
      this.setState({
         btnClicked:true
      })
-     this.props.fetchData();
+    }
   }
 }
 
