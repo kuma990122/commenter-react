@@ -82,6 +82,7 @@
     padding-top: 5px;
     position: relative;
     margin-left: 10%;
+    
   }
   
   .discount__itemCurrentPrice{
@@ -97,8 +98,9 @@
   }
   
   .discount__itemCurrentPrice::before {
-    content: '\A5';
+    content: 'HUF';
     font-size: 14px;
+    text-align: left;
   }
   
   .discount__itemOldPrice{
@@ -108,8 +110,9 @@
   }
   
   .discount__itemOldPrice::before {
-    content: '\A5';
+    content: 'HUF';
     font-size: 14px;
+    text-align: left;
   }
 
  

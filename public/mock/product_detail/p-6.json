@@ -1,0 +1,11 @@
+{
+    "id": "p-6",
+    "shopIds": ["s-6"],
+    "shop": "Burgur King",
+    "tag": "",
+    "picture": "https://burgerking.hu/sites/burgerking.hu/files/BK_Web_CrispyChicken_500x540px.png",
+    "product": "Crispy Chicken",
+    "currentPrice": 880,
+    "oldPrice": 1200,
+    "saleDesc": "11593 sold"
+}

@@ -1,0 +1,11 @@
+{
+    "id": "p-2",
+    "shopIds": ["s-3"],
+    "shop": "Komachi Bistro",
+    "tag": "",
+    "picture": "https://imageproxy.wolt.com/menu/menu-images/5f02d9e357a33222925676a5/555cf5f4-0c4f-11ed-8ed5-0263e1db5b4b_set.karaage_curry.jpeg",
+    "product": "Miso Ramen Curry Set",
+    "currentPrice": 3000,
+    "oldPrice": 3800,
+    "saleDesc": "9123 sold"
+}

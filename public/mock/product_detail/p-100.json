@@ -1,0 +1,10 @@
+{
+    "id": "p-100",
+    "shopIds": ["s-100"],
+    "shop": "Hive",
+    "tag": "",
+    "product": "The Hive Party Hostel",
+    "currentPrice": 3000,
+    "oldPrice": 7190,
+    "picture": "http://thehive.hu/images/galleries/12/cover_261659645-135217005540083-1063452442336283191-n.jpg"
+  }

@@ -11,7 +11,8 @@
   
   .likeItem__pic {
     width: 90px;
-    height: 90px;
+    vertical-align:middle;
+    object-fit: cover;
   }
   
   .likeItem__picTag {
@@ -71,7 +72,7 @@
   }
   
   .likeItem__currentPrice::before {
-    content: "\A5";
+    content: "HUF";
     font-size: 14px;
     margin-right: 2px;
     vertical-align: 1px;
@@ -86,7 +87,7 @@
   }
   
   .likeItem__oldPrice::before {
-    content: "\A5";
+    content: "HUF";
     margin-right: 1px;
   }
   

@@ -1,6 +1,6 @@
 export const SliderSettings = {
     //The configuration of slider animation
-        dots: false,
+        dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 5,

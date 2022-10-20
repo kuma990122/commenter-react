@@ -11,6 +11,8 @@
   
   .productOverview__imgContainer {
     min-height: 100px;
+    width: 50%;
+    transform: translate(50%, 0%);
   }
   
   .productOverview__img {

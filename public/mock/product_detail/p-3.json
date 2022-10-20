@@ -1,0 +1,11 @@
+{
+    "id": "p-3",
+    "shopIds": ["s-3","s-3"],
+    "shop": "Komachi Bistro",
+    "tag": "",
+    "picture": "https://scontent.fbud6-4.fna.fbcdn.net/v/t39.30808-6/278548018_4936736029712807_9205218146022945752_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=HHcmDyhmqyIAX918c3X&_nc_ht=scontent.fbud6-4.fna&oh=00_AT-vGmCnJqpv4GshBmmM6xxqeVLOVeO_L5SWrEHg36DvbA&oe=6354F250",
+    "product": "Tenpura HomeRice",
+    "currentPrice": 3100,
+    "oldPrice": 3600,
+    "saleDesc": "3512 sold"
+}

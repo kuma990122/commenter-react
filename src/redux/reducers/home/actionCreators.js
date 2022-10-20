@@ -1,5 +1,4 @@
 import * as constants from './constants';
-import {get} from '../../../utils/request';
 import url from '../../../utils/url';
 import { FETCH_DATA } from '../../middleware/api';
 import { schema } from "../domains/products";
