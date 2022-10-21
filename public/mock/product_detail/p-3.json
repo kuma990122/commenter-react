@@ -1,11 +1,27 @@
 {
     "id": "p-3",
     "shopIds": ["s-3","s-3"],
+    "nearestShop": "s-3",
     "shop": "Komachi Bistro",
     "tag": "",
     "picture": "https://scontent.fbud6-4.fna.fbcdn.net/v/t39.30808-6/278548018_4936736029712807_9205218146022945752_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=HHcmDyhmqyIAX918c3X&_nc_ht=scontent.fbud6-4.fna&oh=00_AT-vGmCnJqpv4GshBmmM6xxqeVLOVeO_L5SWrEHg36DvbA&oe=6354F250",
     "product": "Tenpura HomeRice",
+    "description": "The komachi deluxe set with homerice and tempura(cripsy fried shrimp), lead you to the unimaginable world",
     "currentPrice": 3100,
     "oldPrice": 3600,
-    "saleDesc": "3512 sold"
+    "saleDesc": "3512 sold",
+    "detail":{
+        "category": "meal",
+        "products":[{"name":"Tenpura HomeRice", "quantity":"1", "price":"3100HUF"}],
+        "remark":"Take away fee: 200HUF"
+    },
+    "validityPeriod": "2022-10-20 to 2022-12-15",
+    "purchaseNotes":[
+        {"title":"Excluded date","content":"Available on weekends and weekdays but except for Monday"},
+        {"title":"Usable period","content":"Usage time：17:00-20:30"},
+        {"title":"Appointment reminder","content":"Reservation is required, you may need to wait for a table during peak consumption"},
+        {"title":"Rule reminder","content":"Each purchase coupon is recommended for 2 people to use"},
+        {"title":"private room","content":"Private rooms aren't available"},
+        {"title":"Dine in and take away","content":"Dine-in and take-out are available"},
+        {"title":"Merchant Services","content":"Provie free WiFi"}]
 }

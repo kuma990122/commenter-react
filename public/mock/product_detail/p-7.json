@@ -1,11 +1,27 @@
 {
     "id": "p-7",
     "shopIds": ["s-7"],
+    "nearestShop": "s-7",
     "shop": "itoshii",
     "tag": "",
     "picture": "http://www.itoshii.hu/documents/menu/menu.jpg",
     "product": "Sushi Buffet",
+    "description": "BUDAPEST'S LARGEST JAPANESE 'ALL YOU CAN EAT' RESTAURANT",
     "currentPrice": 5999,
     "oldPrice": 9390,
-    "saleDesc": "3555 sold"
+    "saleDesc": "3555 sold",
+    "detail":{
+        "category": "Buffet",
+        "products":[{"name":"Sushi Buffet", "quantity":"1", "price":"5999HUF"}],
+        "remark":"No take away is allowed"
+    },
+    "validityPeriod": "2022-11-20 to 2022-12-1",
+    "purchaseNotes":[
+        {"title":"Excluded date","content":"Available on weekends and weekdays"},
+        {"title":"Usable period","content":"Usage time：18:00-20:30"},
+        {"title":"Appointment reminder","content":"Reservation is required, you may need to wait for a table during peak consumption"},
+        {"title":"Rule reminder","content":"Each purchase coupon is recommended for 1 people to use"},
+        {"title":"private room","content":"Private rooms aren't available"},
+        {"title":"Dine in and take away","content":"Dine-in are available but take-out aren't available"},
+        {"title":"Merchant Services","content":"Provie free WiFi"}]
 }

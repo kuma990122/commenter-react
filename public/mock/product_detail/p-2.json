@@ -1,11 +1,27 @@
 {
     "id": "p-2",
     "shopIds": ["s-3"],
+    "nearestShop": "s-3",
     "shop": "Komachi Bistro",
     "tag": "",
     "picture": "https://imageproxy.wolt.com/menu/menu-images/5f02d9e357a33222925676a5/555cf5f4-0c4f-11ed-8ed5-0263e1db5b4b_set.karaage_curry.jpeg",
     "product": "Miso Ramen Curry Set",
+    "description": "The komachi set with Miso(spicy miso can be choosed) ramen, tonkatsu curry and salata, taste every kind of Japanese meal in this set!",
     "currentPrice": 3000,
     "oldPrice": 3800,
-    "saleDesc": "9123 sold"
+    "saleDesc": "9123 sold",
+    "detail":{
+        "category": "meal",
+        "products":[{"name":"Miso Ramen Curry Set", "quantity":"1", "price":"3000HUF"}],
+        "remark":"Take away fee: 200HUF"
+    },
+    "validityPeriod": "2022-10-20 to 2022-12-15",
+    "purchaseNotes":[
+        {"title":"Excluded date","content":"Available on weekends and weekdays but except for Monday"},
+        {"title":"Usable period","content":"Usage time：17:00-20:30"},
+        {"title":"Appointment reminder","content":"Reservation is required, you may need to wait for a table during peak consumption"},
+        {"title":"Rule reminder","content":"Each purchase coupon is recommended for 2 people to use"},
+        {"title":"private room","content":"Private rooms aren't available"},
+        {"title":"Dine in and take away","content":"Dine-in and take-out are available"},
+        {"title":"Merchant Services","content":"Provie free WiFi"}]
 }

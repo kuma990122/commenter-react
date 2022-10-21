@@ -12,15 +12,15 @@ import { getProduct, getShop } from '../../redux/reducers/detail/selectors';
 
 class ProductDetail extends Component {
     render() {
-        const {product, shop} =this.props;
+        const {product, relatedShop} =this.props;
         return (
             <div>
                 <Header title="Detail info" onBack={this.handleBack} grey />
-                <ProductOverview />
-                <ShopInfo />
-                <Detail />
-                <Remark />
-                <PurchaseButton />
+                {product && <ProductOverview data={product}/>}
+                {relatedShop && <ShopInfo data={relatedShop}/>}
+                {product && <Detail data={product}/>}
+                {product && <Remark data={product}/>}
+                {product && <PurchaseButton productId={product.id} />}
             </div>
         );
     }
@@ -28,8 +28,10 @@ class ProductDetail extends Component {
         const { product } =this.props;
         if(!product){
             const productId = this.props.match.params.id;
-            this.props.LoadProductDetail( productId);
-        }
+            this.props.LoadProductDetail(productId);
+        }else if (!this.props.relatedShop) {
+            this.props.detailActions.loadShopById(product.nearestShop);
+          }
     }
     
     componentDidUpdate(preProps){
@@ -48,7 +50,7 @@ const mapStateToProps = (state, props) =>{
     const productId = props.match.params.id;
     return {
         product: getProduct(state, productId),
-        shop: getShop(state, productId)
+        relatedShop: getShop(state, productId)
     };
 }
 

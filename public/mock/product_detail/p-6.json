@@ -1,11 +1,27 @@
 {
     "id": "p-6",
     "shopIds": ["s-6"],
+    "nearestShop": "s-6",
     "shop": "Burgur King",
     "tag": "",
     "picture": "https://burgerking.hu/sites/burgerking.hu/files/BK_Web_CrispyChicken_500x540px.png",
     "product": "Crispy Chicken",
+    "description": "Fried crispy golden chicken patties are paired with refreshing tomatoes and lettuce without being greasy, and can also add cheese slices.",
     "currentPrice": 880,
     "oldPrice": 1200,
-    "saleDesc": "11593 sold"
+    "saleDesc": "11593 sold",
+    "detail":{
+        "category": "Burger",
+        "products":[{"name":"Crispy Chicken", "quantity":"1", "price":"880HUF"}],
+        "remark":"Take away fee: 80HUF"
+    },
+    "validityPeriod": "2022-9-20 to 2022-12-5",
+    "purchaseNotes":[
+        {"title":"Excluded date","content":"Available on weekends and statutory holidays within the validity period"},
+        {"title":"Usable period","content":"Usage time：11:00-22:00"},
+        {"title":"Appointment reminder","content":"No reservation is required, you may need to wait for a table during peak consumption"},
+        {"title":"Rule reminder","content":"Each purchase coupon is recommended for 2 people to use"},
+        {"title":"private room","content":"Private rooms are available, the conditions are: Inquire the merchant for details"},
+        {"title":"Dine in and take away","content":"Dine-in and take-out are available"},
+        {"title":"Merchant Services","content":"Provie free WiFi"}]
 }

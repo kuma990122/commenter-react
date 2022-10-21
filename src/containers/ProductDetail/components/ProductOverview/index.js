@@ -3,7 +3,13 @@ import { Link } from 'react-router-dom';
 import './style.css'
 class ProductOverview extends Component {
     render() {
-      const {id, shop, picture, description, currentPrice, oldPrice} = this.props;
+      const { 
+        id, 
+        shop, 
+        picture, 
+        description, 
+        currentPrice, 
+        oldPrice} = this.props.data;
         return (
         <div className="productOverview">
         <div className="productOverview__header">
@@ -34,7 +40,7 @@ class ProductOverview extends Component {
           </li>
           <li className="productOverview__remarkItem">
             <i className="productOverview__sign2" />
-            <span className="productOverview__desc">Would refund after expiring</span>
+            <span className="productOverview__desc">Refunding after expiring</span>
           </li>
         </ul>
       </div>

@@ -3,7 +3,7 @@
     "shopIds": ["s-10"],
     "nearestShop": "s-10",
     "shop": "McDonald's",
-    "tag": "免预约",
+    "tag": "",
     "picture": "https://media.mcdonalds.hu/storage/61/40/value_menukep-product_list_image.png",
     "product": "Mc Incoming offer",
     "description": "The time limited special set till 5th Dec, with McChicken burger, Mc Freeze, fries and drink, only for 1290 HUF now!",
@@ -15,6 +15,13 @@
         "products":[{"name":"Mc Incoming offer", "quantity":"1", "price":"1290HUF"}],
         "remark":"Take away fee: 80HUF"
     },
-    "validityPeriod": "2022-9-20至2022-12-5",
-    "purchaseNotes":[{"title":"除外日期","content":"有效期内周末、法定节假日可用"},{"title":"使用时间","content":"团购券使用时间：11:00-22:00"},{"title":"预约提醒","content":"无需预约，消费高峰时可能需要等位"},{"title":"规则提醒","content":"每张团购券建议2人使用"},{"title":"包间","content":"可用包间，条件为：详询商户"},{"title":"堂食外带","content":"仅限堂食，不提供餐前外带，餐毕未吃完可打包，打包费详情咨询商家"},{"title":"商家服务","content":"提供免费WiFi"}]
+    "validityPeriod": "2022-9-20 to 2022-12-5",
+    "purchaseNotes":[
+        {"title":"Excluded date","content":"Available on weekends and statutory holidays within the validity period"},
+        {"title":"Usable period","content":"Usage time：11:00-22:00"},
+        {"title":"Appointment reminder","content":"No reservation is required, you may need to wait for a table during peak consumption"},
+        {"title":"Rule reminder","content":"Each purchase coupon is recommended for 2 people to use"},
+        {"title":"private room","content":"Private rooms are available, the conditions are: Inquire the merchant for details"},
+        {"title":"Dine in and take away","content":"Dine-in and take-out are available"},
+        {"title":"Merchant Services","content":"Provie free WiFi"}]
   }

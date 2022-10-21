@@ -1,11 +1,22 @@
 {
     "id": "p-8",
     "shopIds": ["s-8","s-8"],
+    "nearestShop": "s-8",
     "shop": "Paprika Vendéglő",
     "tag": "",
     "picture": "https://penguin-199a3.kxcdn.com/wp-content/uploads/2019/03/things-to-do-in-budapest-in-three-days-a-la-maison-grand.jpg.webp",
     "product": "À la Maison Grand",
+    "description": "Crispy fried toast served with ice-cold jam, served with fresh fruit and ice cream platter, suitable as a snack for your afternoon tea",
     "currentPrice": 2240,
     "oldPrice": 2700,
-    "saleDesc": "1715 sold"
+    "saleDesc": "1715 sold",
+    "validityPeriod": "2022-10-20 to 2022-12-12",
+    "purchaseNotes":[
+        {"title":"Excluded date","content":"Available only on weekdays"},
+        {"title":"Usable period","content":"Usage time：18:00-20:30"},
+        {"title":"Appointment reminder","content":"Reservation is required, you may need to wait for a table during peak consumption"},
+        {"title":"Rule reminder","content":"Each purchase coupon is recommended for 1 people to use"},
+        {"title":"private room","content":"Private rooms aren't available"},
+        {"title":"Dine in and take away","content":"Dine-in are available but take-out aren't available"},
+        {"title":"Merchant Services","content":"Provie free WiFi"}]
   }

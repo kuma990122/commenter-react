@@ -36,7 +36,7 @@ export const loadProductDetail = (id) =>{
       if(product) {
         return dispatch(fetchProductDetailSuccess(id))
       }
-    const endpoint = url.loadProductDetail(id);
+    const endpoint = url.getProductDetail(id);
     return dispatch(fetchProductDetail(endpoint,id));
    }
 }
@@ -47,7 +47,7 @@ export const loadShopById = (id) =>{
           if(shop) {
             return dispatch(fetchShopSuccess(id))
           }
-        const endpoint = url.loadShopById(id);
+        const endpoint = url.getShopById(id);
         return dispatch(fetchShopById(endpoint,id));
        }
 }

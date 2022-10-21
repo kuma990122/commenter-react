@@ -17,9 +17,10 @@ export default reducer;
 //selectors
 export const getProductDetail = (state, id) => {
     const product = state.domains.products[id];
-    return product;
+    return product && product.detail && product.purchaseNotes ? product :  null;
 }
 
 export const getProductById = (state, id) =>{
-    return state.domains.products[id];
+    const product = state.domains.products[id];
+    return product;
 }
