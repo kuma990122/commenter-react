@@ -1,11 +1,25 @@
 {
     "id": "p-15",
     "shopIds": ["s-15"],
-    "shop": "Italia",
+    "shop": "Ciao Italia",
     "tag": "",
     "picture": "https://p1.meituan.net/deal/a5d9800b5879d596100bfa40ca631396114262.jpg.webp@180w_180h_1e_1c_1l_80q|watermark=0",
     "product": "Bolognese paszta",
     "currentPrice": 2350,
     "oldPrice": 3000,
-    "saleDesc": "2397 sold"
+    "saleDesc": "2397 sold",
+    "detail":{
+      "category": "meal",
+      "products":[{"name":"Bolognese paszta", "quantity":"1", "price":"2350HUF"}],
+      "remark":"Take away is allowed"
+  },
+  "validityPeriod": "2022-10-20 to 2022-12-12",
+  "purchaseNotes":[
+      {"title":"Excluded date","content":"Available only on weekdays"},
+      {"title":"Usable period","content":"Usage time：18:00-20:30"},
+      {"title":"Appointment reminder","content":"Reservation is required, you may need to wait for a table during peak consumption"},
+      {"title":"Rule reminder","content":"Each purchase coupon is recommended for 1 people to use"},
+      {"title":"private room","content":"Private rooms aren't available"},
+      {"title":"Dine in and take away","content":"Dine-in are available but take-out aren't available"},
+      {"title":"Merchant Services","content":"Provie free WiFi"}]
   }

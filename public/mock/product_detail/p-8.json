@@ -10,6 +10,11 @@
     "currentPrice": 2240,
     "oldPrice": 2700,
     "saleDesc": "1715 sold",
+    "detail":{
+        "category": "meal",
+        "products":[{"name":"À la Maison Grand", "quantity":"1", "price":"2240HUF"}],
+        "remark":"No take away is allowed"
+    },
     "validityPeriod": "2022-10-20 to 2022-12-12",
     "purchaseNotes":[
         {"title":"Excluded date","content":"Available only on weekdays"},

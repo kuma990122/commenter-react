@@ -7,5 +7,19 @@
     "product": "Lángos",
     "currentPrice": 1200,
     "oldPrice": 1500,
-    "saleDesc": "6034 sold"
+    "saleDesc": "6034 sold",
+    "detail":{
+      "category": "snack",
+      "products":[{"name":"Lángos", "quantity":"1", "price":"1200HUF"}],
+      "remark":"Take away is allowed"
+  },
+    "validityPeriod": "2022-10-10 to 2023-06-12",
+    "purchaseNotes":[
+        {"title":"Excluded date","content":"Available on weekdays and Saturday"},
+        {"title":"Usable period","content":"Usage time：18:00-20:30"},
+        {"title":"Appointment reminder","content":"Reservation is not required, but you may need to wait for a table during peak consumption"},
+        {"title":"Rule reminder","content":"Each purchase coupon is recommended for 2 people to use"},
+        {"title":"private room","content":"Private rooms aren't available"},
+        {"title":"Dine in and take away","content":"Dine-in are available but take-out aren't available"},
+        {"title":"Merchant Services","content":"Provie free WiFi"}]
   }

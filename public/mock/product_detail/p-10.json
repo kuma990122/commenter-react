@@ -4,8 +4,22 @@
     "shop": "Ste&k",
     "tag": "",
     "picture": "https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/static/optimized/rev-939cb5a/images/Hungarian-Food-Porkolt-Beef-Stew.jpg",
-    "product": "Pörkölt",
+    "product": "Tasty Potato Stew",
     "currentPrice": 2000,
     "oldPrice": 2500,
-    "saleDesc": "23976 sold"
+    "saleDesc": "23976 sold",
+    "detail":{
+      "category": "steak",
+      "products":[{"name":"Ste&k", "quantity":"1", "price":"2000HUF"}],
+      "remark":"No take away is allowed"
+  },
+    "validityPeriod": "2022-10-20 to 2022-12-12",
+    "purchaseNotes":[
+        {"title":"Excluded date","content":"Available only on weekdays"},
+        {"title":"Usable period","content":"Usage time：18:00-20:30"},
+        {"title":"Appointment reminder","content":"Reservation is required, you may need to wait for a table during peak consumption"},
+        {"title":"Rule reminder","content":"Each purchase coupon is recommended for 1 people to use"},
+        {"title":"private room","content":"Private rooms aren't available"},
+        {"title":"Dine in and take away","content":"Dine-in are available but take-out aren't available"},
+        {"title":"Merchant Services","content":"Provie free WiFi"}]
   }

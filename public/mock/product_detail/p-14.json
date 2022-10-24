@@ -1,11 +1,25 @@
 {
     "id": "p-14",
     "shopIds": ["s-14"],
-    "shop": "Meggyes Rétes",
+    "shop": "Fornetti",
     "tag": "",
     "picture": "https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/static/optimized/rev-939cb5a/images/Hungarian-Food-Meggyes-Retes.jpg",
-    "product": "Fornetti",
+    "product": "Meggyes Rétes ",
     "currentPrice": 400,
     "oldPrice": 650,
-    "saleDesc": "3350 sold"
+    "saleDesc": "3350 sold",
+    "detail":{
+      "category": "cake",
+      "products":[{"name":"Meggyes Rétes", "quantity":"1", "price":"400HUF"}],
+      "remark":"Take away is allowed"
+  },
+    "validityPeriod": "2022-06-12 to 2023-03-15",
+    "purchaseNotes":[
+  {"title":"Excluded date","content":"Available on weekdays and Saturday"},
+  {"title":"Usable period","content":"Usage time：18:00-17:30"},
+  {"title":"Appointment reminder","content":"Reservation is not required"},
+  {"title":"Rule reminder","content":"Each purchase coupon is recommended for 2 people to use"},
+  {"title":"private room","content":"Private rooms aren't available"},
+  {"title":"Dine in and take away","content":"Take-out are available"},
+  {"title":"Merchant Services","content":"No free WiFi"}]
   }

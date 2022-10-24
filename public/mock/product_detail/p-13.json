@@ -7,5 +7,19 @@
     "product": "Dobos Torta",
     "currentPrice": 1100,
     "oldPrice": 1440,
-    "saleDesc": "1895 sold"
+    "saleDesc": "1895 sold",
+    "detail":{
+      "category": "cake",
+      "products":[{"name":"Dobos Torta", "quantity":"1", "price":"1100HUF"}],
+      "remark":"Take away is allowed"
+  },
+    "validityPeriod": "2022-10-12 to 2023-02-13",
+    "purchaseNotes":[
+    {"title":"Excluded date","content":"Available on weekdays and Saturday"},
+    {"title":"Usable period","content":"Usage time：12:00-20:30"},
+    {"title":"Appointment reminder","content":"Reservation is not required"},
+    {"title":"Rule reminder","content":"Each purchase coupon is recommended for 2 people to use"},
+    {"title":"private room","content":"Private rooms aren't available"},
+    {"title":"Dine in and take away","content":"Take-out are available"},
+    {"title":"Merchant Services","content":"No free WiFi"}]
   }

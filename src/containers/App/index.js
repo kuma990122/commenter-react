@@ -8,6 +8,7 @@ import { connect } from "react-redux";
 import './style.css';
 import Home from '../Home';
 import ProductDetail from '../ProductDetail';
+import Search from '../Search';
 
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
       <Router>
         <Switch>
           <Route path="/detail/:id" component={ProductDetail} />
+          <Route path="/search" component={Search}/>
           <Route path="/" component={Home} />
         </Switch>
       </Router>

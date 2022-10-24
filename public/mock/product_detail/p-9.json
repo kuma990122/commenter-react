@@ -1,11 +1,27 @@
 {
     "id": "p-9",
     "shopIds": ["s-8"],
+    "nearestShop": "s-8",
     "shop": "Paprika Vendéglő",
     "tag": "",
     "picture": "https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/static/optimized/rev-939cb5a/images/Hungarian-Food-goulosh.jpg",
     "product": "Goulash",
+    "description": "Tasty Potato Stew",
     "currentPrice": 1900,
     "oldPrice": 2300,
-    "saleDesc": "53548 sold"
+    "saleDesc": "53548 sold",
+    "detail":{
+      "category": "meal",
+      "products":[{"name":"Goulash", "quantity":"1", "price":"1900HUF"}],
+      "remark":"No take away is allowed"
+  },
+    "validityPeriod": "2022-10-20 to 2022-12-12",
+    "purchaseNotes":[
+        {"title":"Excluded date","content":"Available only on weekdays"},
+        {"title":"Usable period","content":"Usage time：18:00-20:30"},
+        {"title":"Appointment reminder","content":"Reservation is required, you may need to wait for a table during peak consumption"},
+        {"title":"Rule reminder","content":"Each purchase coupon is recommended for 1 people to use"},
+        {"title":"private room","content":"Private rooms aren't available"},
+        {"title":"Dine in and take away","content":"Dine-in are available but take-out aren't available"},
+        {"title":"Merchant Services","content":"Provie free WiFi"}]
   }

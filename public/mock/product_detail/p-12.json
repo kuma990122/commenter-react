@@ -7,5 +7,19 @@
     "product": "Chimney Roll",
     "currentPrice": 880,
     "oldPrice": 1200,
-    "saleDesc": "15500 sold"
+    "saleDesc": "15500 sold",
+    "detail":{
+      "category": "snack",
+      "products":[{"name":"Chimney Roll", "quantity":"1", "price":"880HUF"}],
+      "remark":"Take away is allowed"
+  },
+    "validityPeriod": "2022-10-10 to 2023-06-12",
+    "purchaseNotes":[
+    {"title":"Excluded date","content":"Available on weekdays and Saturday"},
+    {"title":"Usable period","content":"Usage time：18:00-20:30"},
+    {"title":"Appointment reminder","content":"Reservation is not required"},
+    {"title":"Rule reminder","content":"Each purchase coupon is recommended for 2 people to use"},
+    {"title":"private room","content":"Private rooms aren't available"},
+    {"title":"Dine in and take away","content":"Take-out are available"},
+    {"title":"Merchant Services","content":"No free WiFi"}]
   }
