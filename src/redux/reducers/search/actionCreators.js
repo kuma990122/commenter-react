@@ -18,11 +18,10 @@ const fetchSearchKeywords = (text, endpoint) => ({
 //load the related keywords as a list
 export const loadKeywordsList =(text) =>{
     return (dispatch, getState) =>{
-        const { keywordsList } = getState().search;
+        const  keywordsList  = getState().SearchReducer.searchKeywordsReducer;
         if(keywordsList[text]){
-            return null;
+            return keywordsList[text];
         }
-
         const endpoint = url.getSearchKeywords(text);
         return dispatch(fetchSearchKeywords(text, endpoint))
     }

@@ -37,7 +37,7 @@ const searchKeywordByText = ( state ={isFetching: false, ids:[]}, action) =>{
         case constants.FETCH_INPUT_KEYWORDS_REQUEST:
             return {...state, isFetching: true}
         case constants.FETCH_INPUT_KEYWORDS_SUCCESS:
-            return {...state, isFetching: false, ids:state.ids.concat(action.reponse.ids)}
+            return {...state, isFetching: false, ids:state.ids.concat(action.response.ids)}
         case constants.FETCH_INPUT_KEYWORDS_FAILURE:
             return {...state, isFetching: false};
         default:

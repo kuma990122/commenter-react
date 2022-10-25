@@ -25,7 +25,7 @@ class Search extends Component {
     
     handleInputChange = text =>{
         this.props.setInput(text);
-        this.props.loadKeywordsList(text);
+        this.props.loadKeywords(text);
     }
 
     handleInputClear =() =>{
@@ -34,7 +34,8 @@ class Search extends Component {
 
     handleCancel = () =>{
         this.props.clearKeyword();
-        this.props.history.goBack();
+        // this.props.history.goBack();
+        window.history.back()
     }
     
     //Clicking logic of the keyword
@@ -53,6 +54,7 @@ class Search extends Component {
 }
 
 const mapStateToProps = (state, props) =>{
+    console.log(state)
     return{
         searchKeywords: getInputKeywords(state),
         inputText: getInputText(state),
