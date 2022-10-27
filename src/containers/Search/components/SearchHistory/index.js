@@ -11,7 +11,7 @@ class SearchHistory extends Component {
               <ul className="searchHistory__list">
                 {
                   history.map((item, index) =>{
-                    return <li key={item.id} onClick={this.handleClick.bind(this,item)}className="searchHistory__item">
+                    return <li key={item.id} onClick={this.handleClick.bind(this,item)} className="searchHistory__item">
                       {item.keyword}
                     </li>
                   })
