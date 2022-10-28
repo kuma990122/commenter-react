@@ -48,3 +48,8 @@ export const addInputToHistory = (keywordId) =>({
 export const clearHistoryText = () =>({
    type: constants.CLEAR_HISTORY_KEYWORD_TEXT
 })
+
+export const selectKeyword = (text) =>({
+   type: constants.SELECT_KEYWORD_TEXT,
+   text
+})

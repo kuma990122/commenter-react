@@ -13,8 +13,8 @@ const defaultState = {
      }
     */
     SearchKeywords:{},
-    historyKeywordsText: [] 
-    //save the keywords' id
+    historyKeywordsText: [] ,
+    selectedKeyword:''
 };
 
 const searchKeywordsReducer = (state = defaultState.SearchKeywords, action) =>{
@@ -73,10 +73,19 @@ const historyReducer = (state = defaultState.historyKeywordsText, action) => {
     return state;
 }
 
+const selectedTextReducer = (state = defaultState.selectedKeyword, action) =>{
+    if(action.type === constants.SELECT_KEYWORD_TEXT){
+        return state.replace(state,action.text)
+    }
+
+    return state;
+}
+
 const reducer = combineReducers({
     searchKeywordsReducer,
     searchInputReducer,
-    historyReducer
+    historyReducer,
+    selectedTextReducer
 })
 
 export default reducer;

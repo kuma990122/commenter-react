@@ -3,12 +3,12 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import SearchBox from './components/SearchBox';
 import SearchHistory from './components/SearchHistory';
-import {loadKeywordsList, setInputKeyword, clearKeywordText, addInputToHistory, clearHistoryText} from '../../redux/reducers/search/actionCreators';
+import {loadKeywordsList, setInputKeyword, clearKeywordText, addInputToHistory, clearHistoryText, selectKeyword} from '../../redux/reducers/search/actionCreators';
 import {getInputKeywords, getInputText, getHistoryText } from '../../redux/reducers/search/selectors';
 
 class Search extends Component {
     render() {
-        const {inputText, searchKeywords, history} = this.props;
+        const {inputText, searchKeywords, historyKeywords} = this.props;
         return (
             <div>
                 <SearchBox inputText={inputText} searchKeywords={searchKeywords}
@@ -16,7 +16,7 @@ class Search extends Component {
                 onClear={this.handleInputClear}
                 onCancel={this.handleCancel}
                 onClickItem={this.handleItemClick}/>
-                <SearchHistory history={history}
+                <SearchHistory historyKeywords={historyKeywords}
                 onClickItem={this.handleItemClick}
                 onClear={this.handleClearHistory}/>
             </div>
@@ -42,6 +42,7 @@ class Search extends Component {
     handleItemClick = item =>{
         this.props.setInput(item.keyword);
         this.props.addInput(item.id);
+        this.props.selectKeyword(item.keyword);
         this.props.history.push("/search_result");
     }
 
@@ -59,7 +60,7 @@ const mapStateToProps = (state, props) =>{
     return{
         searchKeywords: getInputKeywords(state),
         inputText: getInputText(state),
-        history: getHistoryText(state)
+        historyKeywords: getHistoryText(state)
     }
 }
 
@@ -69,7 +70,8 @@ const mapDispatchToProps = (dispatch) =>{
         setInput: bindActionCreators(setInputKeyword, dispatch),
         clearKeyword: bindActionCreators(clearKeywordText, dispatch),
         addInput: bindActionCreators(addInputToHistory,dispatch),
-        clearHistory: bindActionCreators(clearHistoryText, dispatch)
+        clearHistory: bindActionCreators(clearHistoryText, dispatch),
+        selectKeyword: bindActionCreators(selectKeyword,dispatch)
     }
 }
 

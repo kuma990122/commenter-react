@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { dataSource } from './shoppingListData';
+
 import './style.css';
 import ShoppingItem from '../ShoppingItem'; 
 
 
 class ShoppingList extends Component {
     render() {
+        const {dataSource} = this.props;
         return (
         <div className="shopList">
         <div className="shopList__list">

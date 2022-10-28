@@ -7,7 +7,7 @@ class Header extends Component {
         return (
             <header className="header" style={{'backgroundColor':backgroundColor }}>
               <div className="header__back" onClick={onBack}>
-               返回
+               back
               </div>
               <div className="header__title">{title}</div>
             </header>

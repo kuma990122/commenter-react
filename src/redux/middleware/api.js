@@ -37,7 +37,9 @@ export default store => next => action =>{
     if(typeof callAPI === 'undefined') {
         return next(action)
     }
+    //解构
     const { endpoint, schema, types } = callAPI;
+    //赋值
     const [requestType, successType, failureType] = types;
 
     //增强版action，带有额外数据data的action也可以被处理，在获得的原有action基础上将FETCH_DATA属性剔除后返回进行处理

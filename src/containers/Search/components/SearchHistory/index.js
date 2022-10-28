@@ -4,13 +4,13 @@ import './style.css';
 class SearchHistory extends Component {
     
     render() {
-        const {history} = this.props
+        const {historyKeywords} = this.props
         return (
             <div className="searchHistory">
               <div className="searchHistory__header">Search Records</div>
               <ul className="searchHistory__list">
                 {
-                  history.map((item, index) =>{
+                  historyKeywords.map((item, index) =>{
                     return <li key={item.id} onClick={this.handleClick.bind(this,item)} className="searchHistory__item">
                       {item.keyword}
                     </li>
