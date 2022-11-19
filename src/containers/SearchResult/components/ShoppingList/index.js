@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-
+import { ShoppingListWrapper,
+         ShoppingL1st,
+         ShoppingListBreaker } from './style';
 import './style.css';
 import ShoppingItem from '../ShoppingItem'; 
 
@@ -8,18 +10,18 @@ class ShoppingList extends Component {
     render() {
         const {dataSource} = this.props;
         return (
-        <div className="shopList">
-        <div className="shopList__list">
+        <ShoppingListWrapper>
+        <ShoppingL1st>
           {dataSource.map((item, index) => {
             return (
-              <div key={item.id}>
+              <div key={index}>
                 <ShoppingItem data={item} />
-                <div className="shopList__divider" />
+                <ShoppingListBreaker />
               </div>
             );
           })}
-        </div>
-      </div>
+        </ShoppingL1st>
+      </ShoppingListWrapper>
         );
     }
 }

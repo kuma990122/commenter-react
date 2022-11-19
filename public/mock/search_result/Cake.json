@@ -1,0 +1,24 @@
+[
+    {
+        "id": "p-13",
+        "url": "",
+        "pic": "https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/static/optimized/rev-939cb5a/images/Hungarian-Food-Dobos-Torta.jpg",
+        "shop": "Dobos Torta",
+        "star": 50,
+        "price": 1100,
+        "commentQuantity": 143,
+        "region": "8th District",
+        "category": "cake"
+      },{
+        "id": "p-14",
+        "url": "",
+        "pic": "https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/static/optimized/rev-939cb5a/images/Hungarian-Food-Meggyes-Retes.jpg",
+        "shop": "Fornetti",
+        "star": 50,
+        "price": 400,
+        "commentQuantity": 249,
+        "region": "7th District",
+        "category": "cake"
+      }
+
+]

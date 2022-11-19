@@ -1,24 +1,28 @@
 import React, { Component } from 'react';
 import './style.css';
-
+import {SearchHistoryWrapper,
+        SearchHistoryHeader,
+        SearchHistoryList,
+        SearchHistoryItem,
+        SearchHistoryClear} from './style.js';
 class SearchHistory extends Component {
     
     render() {
         const {historyKeywords} = this.props
         return (
-            <div className="searchHistory">
-              <div className="searchHistory__header">Search Records</div>
-              <ul className="searchHistory__list">
+            <SearchHistoryWrapper>
+              <SearchHistoryHeader>Search Records</SearchHistoryHeader>
+              <SearchHistoryList>
                 {
                   historyKeywords.map((item, index) =>{
-                    return <li key={item.id} onClick={this.handleClick.bind(this,item)} className="searchHistory__item">
+                    return <SearchHistoryItem key={item.id} onClick={this.handleClick.bind(this,item)}>
                       {item.keyword}
-                    </li>
+                    </SearchHistoryItem>
                   })
                 }
-              </ul>
-              <div className="searchHistory__clear" onClick={this.handleClearHistory}>清除搜索记录</div>
-            </div>
+              </SearchHistoryList>
+              <SearchHistoryClear onClick={this.handleClearHistory}>Clear the search history</SearchHistoryClear>
+            </SearchHistoryWrapper>
           );
     }
 

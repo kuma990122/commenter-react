@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import Slider from "react-slick";
 import { dataSource } from './dataSource';
+import { CategoryWrapper,
+         CategoryContainer,
+         CategorySection,
+         CategoryIcon,
+         CategoryText } from './style.js';
 import './style.css';
 import {SliderSettings} from './SliderSettings';
 
@@ -10,30 +15,28 @@ class Category extends Component {
         
         return (
             
-            <div className="category">
+            <CategoryWrapper>
                 <Slider {...SliderSettings}>
                       {
                          dataSource.map((section,index) => {
                             return (
-                                <div key={index}>
+                                <CategoryContainer key={index}>
                                     {
                                         section.map((item, i) =>{
                                              return(
-                                                <div className="category__section" key={i}>
+                                                <CategorySection key={i}>
                                                     <a href={item.url}>
-                                                    <img alt="" className="category__icon" src={item.src} />
-                                                    <div>
-                                                        <span className='category__text'>{item.name}</span>
-                                                    </div>
+                                                    <CategoryIcon src={item.src} />
+                                                        <CategoryText>{item.name}</CategoryText> 
                                                     </a>
-                                                </div>
+                                                </CategorySection>
                                              );
                                         })}
-                                </div>
+                                </CategoryContainer>
                             )})
                       }
                 </Slider>
-            </div>
+            </CategoryWrapper>
              );
     }
 }

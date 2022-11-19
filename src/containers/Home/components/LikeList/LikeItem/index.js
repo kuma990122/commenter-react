@@ -1,5 +1,16 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { LikeItemWrapper,
+         LikeItemPicContainer,
+         LikeItemPic,
+         LikeItemContent,
+         LikeItemShop,
+         LikeItemProduct,
+         LikeItemDetailWrapper,
+         LikeItemPriceWrapper,
+         LikeItemCurrentPrice,
+         LikeItemOldPrice,
+         LikeItemSale } from './style';
 import './style.css';
 class LikeItem extends Component {
     render() {
@@ -13,22 +24,22 @@ class LikeItem extends Component {
             saleDesc
           } = this.props.data;
         return (
-            <Link to={`/detail/${id}`} className="likeItem">
-              <div className="likeItem__picContainer"> 
-                <img className="likeItem__pic" src={picture} />
-              </div>
-              <div className="likeItem__content">
-                <div className="likeItem__shop">{shop}</div>
-                <div className="likeItem__product">{product}</div>
-                <div className="likeItem__detail">
-                  <div className="likeItem__price">
-                  <ins className="likeItem__currentPrice">{currentPrice}</ins>
-                  <del className="likeItem__oldPrice">{oldPrice}</del>
-                </div>
-                <div className="likeItem__sale">{saleDesc}</div>
-              </div>
-              </div>
-           </Link>
+            <LikeItemWrapper to={`/detail/${id}`}>
+              <LikeItemPicContainer> 
+                <LikeItemPic src={picture} />
+              </LikeItemPicContainer>
+              <LikeItemContent>
+                <LikeItemShop>{shop}</LikeItemShop>
+                <LikeItemProduct>{product}</LikeItemProduct>
+                <LikeItemDetailWrapper>
+                  <LikeItemPriceWrapper>
+                  <LikeItemCurrentPrice>{currentPrice}</LikeItemCurrentPrice>
+                  <LikeItemOldPrice>{oldPrice}</LikeItemOldPrice>
+                  </LikeItemPriceWrapper>
+                <LikeItemSale>{saleDesc}</LikeItemSale>
+              </LikeItemDetailWrapper>
+              </LikeItemContent>
+           </LikeItemWrapper>
         );
     }
 }

@@ -1,6 +1,18 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import './style.css';
+import { DiscountWrapper,
+         DiscountHeader,
+         DiscountTitle,
+         DiscountMore,
+         DiscountArrow,
+         DiscountContent,
+         DiscountItem,
+         DiscountItemPicContainer,
+         DiscountItemPicture,
+         DiscountItemTitle,
+         DiscountItemPrice,
+         DiscountCurrentPrice,
+         DiscountOldPrice} from './style';
 import Slider from 'react-slick';
 import { SliderSettings } from './SliderSettings';
 
@@ -9,32 +21,32 @@ class Discount extends Component {
     render() {
         const {dataSource} = this.props;
         return (
-            <div className="discount">
-                <a className='discount__header'>
-                    <span className='discount__title'>SuperDiscount!</span>
-                    <span className='discount__more'>Look for more</span>
-                    <span className='discount__arrow' />
-                </a>
-                <div className='discount__content'>
+            <DiscountWrapper>
+                <DiscountHeader>
+                    <DiscountTitle>Super Discount!</DiscountTitle>
+                    <DiscountMore to={`/discounts`}>Look for more</DiscountMore>
+                    <DiscountArrow />
+                 </DiscountHeader>
+                <DiscountContent>
                     <Slider {...SliderSettings}>
                     {dataSource.map((item,index) =>{
                         return(
-                        <Link to={`detail/${item.id}`} key={item.id} className='discount__item'>
-                        <div className='discount__itemPic'>
-                             <img width="100%" height="100%" src={item.picture} />
-                        </div>
-                        <div className='discount__itemTitle'>
+                        <DiscountItem to={`detail/${item.id}`} key={item.id}>
+                        <DiscountItemPicContainer>
+                             <DiscountItemPicture src={item.picture} />
+                        </DiscountItemPicContainer>
+                        <DiscountItemTitle>
                             {item.shop}
-                        </div>
-                        <div className='discount__itemPriceWrapper'>
-                           <ins className='discount__itemCurrentPrice'>{item.currentPrice}</ins>
-                           <del className='discount__itemCurrentPrice::before'>{item.oldPrice} </del>
-                        </div>
-                     </Link>)
+                        </DiscountItemTitle>
+                        <DiscountItemPrice>
+                           <DiscountCurrentPrice>{item.currentPrice}</DiscountCurrentPrice>
+                           <div><DiscountOldPrice>{item.oldPrice} </DiscountOldPrice></div>
+                        </DiscountItemPrice>
+                     </DiscountItem>)
                     })}
                     </Slider>
-                 </div>
-            </div>
+                 </DiscountContent>
+            </DiscountWrapper>
         );
     }
     

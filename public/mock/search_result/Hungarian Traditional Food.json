@@ -1,0 +1,46 @@
+[
+    {
+        "id": "p-11",
+        "url": "",
+        "pic": "https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/static/optimized/rev-939cb5a/images/Hungarian-Food-Langos.jpg",
+        "shop": "Best Lángos",
+        "star": 50,
+        "price": 1200,
+        "commentQuantity": 845,
+        "region": "7th District",
+        "category": "Fast Food"
+      },
+      {
+        "id": "p-8",
+        "url": "",
+        "pic": "https://penguin-199a3.kxcdn.com/wp-content/uploads/2019/03/things-to-do-in-budapest-in-three-days-a-la-maison-grand.jpg.webp",
+        "shop": "Paprika Vendéglő",
+        "star": 50,
+        "price": 2240,
+        "commentQuantity": 2832,
+        "region": "7th District",
+        "category": "meal"
+      },
+      {
+        "id": "p-9",
+        "url": "",
+        "pic": "https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/static/optimized/rev-939cb5a/images/Hungarian-Food-goulosh.jpg",
+        "shop": "Paprika Vendéglő",
+        "star": 50,
+        "price": 1900,
+        "commentQuantity": 1845,
+        "region": "7th District",
+        "category": "meal"
+      },
+      {
+        "id": "p-12",
+        "url": "",
+        "pic": "https://fairylolita.com/wp-content/uploads/2022/05/S__138911759.jpg",
+        "shop": "Chimney Roll",
+        "star": 50,
+        "price": 880,
+        "commentQuantity": 1143,
+        "region": "8th District",
+        "category": "snack"
+      }
+]

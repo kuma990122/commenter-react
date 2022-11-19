@@ -7,7 +7,7 @@
   
   .searchBox__container {
     height: 45px;
-    color: #f63;
+    color: rgb(51, 190, 255);
     padding-left: 8px;
     display: flex;
     align-items: center;
@@ -53,7 +53,7 @@
     padding: 0 10px 0 15px;
     margin: 0;
     z-index: 9999;
-    background-color: #fff;
+    background-color: rgb(240, 238, 238);
   }
   
   .searchBox__item {
@@ -73,7 +73,7 @@
   
   .searchBox__itemQuantity {
     float: right;
-    color: #666;
+    color: rgb(79, 166, 248);
     font-size: 12px;
   }
   

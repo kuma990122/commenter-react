@@ -4,15 +4,22 @@ import ShoppingList from './components/ShoppingList';
 import Header from '../../common/Header';   
 import Footer from '../../common/Footer';
 import {getResultShops} from '../../redux/reducers/searchResult/selectors';
-
+import {loadShopResults} from '../../redux/reducers/searchResult/actionCreators';
+import { bindActionCreators } from 'redux';
 class SearchResult extends Component {
+    constructor(props){
+        super(props)
+        this.state={
+            resultInfo:{}
+        }
+    }
     render() {
         const {resultShops} = this.props; 
         return (
             <div>
-                <Header title="Search Result" onBack={this.handleBack} grey />
+                <Header title="Search Result" onBack={this.handleBack}/>
                 <ShoppingList dataSource={resultShops}/>
-                <Footer title="<-----Back To Main Page" onBack={this.handleBackToMainPage} grey />
+                <Footer title="Back To Main Page" onBack={this.handleBackToMainPage}/>
             </div>
         );
     }
@@ -23,15 +30,22 @@ class SearchResult extends Component {
 
     handleBackToMainPage = () => {
         this.props.history.push('/');
+    };
+    componentDidMount(){
+        this.props.getResult()
     }
 }
 
 const mapStateToProps = (state, props) =>{
-    console.log(state)
     return{
-        resultShops: getResultShops(state)
+        resultShops: getResultShops(state),
+        
     }
 }
+const mapDispatchToProps = (dispatch) =>{
+    return {
+        getResult: bindActionCreators(loadShopResults,dispatch),
+    }
 
-
-export default connect(mapStateToProps, null)(SearchResult);
+}
+export default connect(mapStateToProps, mapDispatchToProps)(SearchResult);

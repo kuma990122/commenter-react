@@ -9,5 +9,10 @@
     "region": "6th district",
     "category": "Snack",
     "address": " Budapest, Bajcsy-Zsilinszky út 25, 1065",
-    "phone": "+36307191373"
+    "phone": "+36307191373",
+    "tag":[
+      {"tagName":"Japanese Buffet Food"},
+      {"service":"live order tracking"},
+      {"shipping": "free shipping"}
+   ]
   }

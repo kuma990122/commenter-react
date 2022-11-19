@@ -1,0 +1,24 @@
+[
+    {
+        "id": "p-11",
+        "url": "",
+        "pic": "https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/static/optimized/rev-939cb5a/images/Hungarian-Food-Langos.jpg",
+        "shop": "Best Lángos",
+        "star": 50,
+        "price": 1200,
+        "commentQuantity": 845,
+        "region": "7th District",
+        "category": "Fast Food"
+      },
+      {
+        "id": "p-12",
+        "url": "",
+        "pic": "https://fairylolita.com/wp-content/uploads/2022/05/S__138911759.jpg",
+        "shop": "Chimney Roll",
+        "star": 50,
+        "price": 880,
+        "commentQuantity": 1143,
+        "region": "8th District",
+        "category": "snack"
+      }
+]

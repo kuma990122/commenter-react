@@ -17,6 +17,7 @@ const productReducer = (state = defaultState.product, action) =>{
         return {...state, isFetching: true};
     }
     if(action.type === constants.FETCH_PRODUCT_DETAIL_SUCCESS){
+        console.log(action.id);
         return {...state, id: action.id , isFetching : false }
     }
     if(action.type === constants.FETCH_PRODUCT_DETAIL_FAILURE){
@@ -30,6 +31,7 @@ const shopReducer = (state = defaultState.relatedShop,action) =>{
         return {...state,isFetching: true};
     }
     if(action.type === constants.FETCH_SHOP_SUCCESS){
+        console.log(action.id);
         return {...state, id: action.id, isFetching : false}
     }
     if(action.type === constants.FETCH_SHOP_FAILURE){

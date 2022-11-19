@@ -1,4 +1,18 @@
 import React, { Component } from 'react';
+import { DetailWrapper,
+         DetailHeader,
+         DetailProductInfo,
+         DetailHeaderIcon,
+         DetailTable,
+         DetailTableRow,
+         DetailCategory,
+         DetailTableDataRight,
+         DetailTableDataPrice,
+         DetailTableDataNewPrice,
+         DetailRemark,
+         DetailMore,
+         DetailNotice,
+         DetailArrow } from './style';
 import './style.css';
 class Detail extends Component {
     render() {
@@ -7,55 +21,56 @@ class Detail extends Component {
         currentPrice,
         oldPrice} = this.props.data;
         return (
-            <div className="detail">
-        <div className="detail__header">
-          <span>Product Info</span>
-          <i className="detail__headerIcon"></i>
-        </div>
-        <table cellPadding="0" cellSpacing="0" className="detail__table">
+        <DetailWrapper>
+        <DetailHeader>
+          <DetailProductInfo>Product Info</DetailProductInfo>
+          <DetailHeaderIcon></DetailHeaderIcon>
+        </DetailHeader>
+        <DetailTable cellPadding="0" cellSpacing="0">
           <tbody>
-            <tr className="detail__row">
-              <th colSpan="3" className="detail__category">
+            <DetailTableRow>
+              <DetailCategory colSpan="3">
                 {category}
-              </th>
-            </tr>
+              </DetailCategory>
+            </DetailTableRow>
+
             {products.map((item, index) => {
               return (
-                <tr key={index} className="detail__row">
+                <DetailTableRow key={index}>
                   <td>{item.name}</td>
-                  <td className="detail__td--alignRight">{item.quantity}</td>
-                  <td className="detail__td--alignRight">{item.price}</td>
-                </tr>
+                  <DetailTableDataRight>{item.quantity}</DetailTableDataRight>
+                  <DetailTableDataRight>{item.price}</DetailTableDataRight>
+                </DetailTableRow>
               );
             })}
-            <tr className="detail__row">
+            <DetailTableRow>
               <td/>
-              <td className="detail__td--price">
+              <DetailTableDataPrice>
                 Highest Price
                 <br/>
-                <strong className="detail__td--priceNew">
+                <DetailTableDataNewPrice>
                   After discount
-                </strong>
-              </td>
-              <td className="detail__td--price">
+                </DetailTableDataNewPrice>
+              </DetailTableDataPrice>
+              <DetailTableDataPrice>
                 {oldPrice}HUF
                 <br/>
-                <strong className="detail__td--priceNew">
+                <DetailTableDataNewPrice>
                  {currentPrice}HUF
-                </strong>
-              </td>
-            </tr>
+                </DetailTableDataNewPrice>
+              </DetailTableDataPrice>
+            </DetailTableRow>
           </tbody>
-        </table>
-        <div className="detail__remark">
+        </DetailTable>
+        <DetailRemark>
           {remark}
-        </div>
-        <div className="detail__more">
+        </DetailRemark>
+        <DetailMore>
           <span>More info</span>
-          <span className="detail__notice">(Recommend to comment under Wi-Fi environment)</span>
-          <i className="detail__arrow"/>
-        </div>
-      </div>
+          <DetailNotice>(Recommend to comment under Wi-Fi environment)</DetailNotice>
+          <DetailArrow/>
+        </DetailMore>
+      </DetailWrapper>
     );
     }
 }

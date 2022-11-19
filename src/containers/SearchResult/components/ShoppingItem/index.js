@@ -1,9 +1,21 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { ShopItemWrapper,
+         ShopItemPic,
+         ShopItemContentWrapper,
+         ShopItemTitle,
+         ShopItemComment,
+         ShopItemQuantity,
+         ShopItemPrice,
+         ShopItemInfoContainer,
+         ShopItemRegion,
+         ShopItemCategory } from './style.js';
 import './style.css'
 
 class ShoppingItem extends Component {
     render() {
         const {
+            id,
             url,
             pic,
             shop,
@@ -14,24 +26,21 @@ class ShoppingItem extends Component {
             category
           } = this.props.data;
         return (
-            <a className="shopItem" href={url}>
-        <div
-          className="shopItem__pic"
-          style={{ backgroundImage: "url(" + pic + ")" }}
-        />
-        <div className="shopItem__content">
-          <div className="shopItem__title">{shop}</div>
-          <div className="shopItem__comment">
+      <ShopItemWrapper to={`/detail/${id}`}>
+        <ShopItemPic  style={{ backgroundImage: "url(" + pic + ")" }} />
+        <ShopItemContentWrapper>
+          <ShopItemTitle>{shop}</ShopItemTitle>
+          <ShopItemComment>
             <span className={"shopItem__star shopItem__star--" + star} />
-            <span className="shopItem__quantity">{quantity}</span>
-            <span className="shopItem__price">{price}/人</span>
-          </div>
-          <div className="shopItem__info">
-            <span className="shopItem__region">{region}</span>
-            <span className="shopItem__category">{category}</span>
-          </div>
-        </div>
-      </a>
+            <ShopItemQuantity>{quantity}</ShopItemQuantity>
+            <ShopItemPrice>{price}/person</ShopItemPrice>
+          </ShopItemComment>
+          <ShopItemInfoContainer>
+            <ShopItemRegion>{region}</ShopItemRegion>
+            <ShopItemCategory>{category}</ShopItemCategory>
+          </ShopItemInfoContainer>
+        </ShopItemContentWrapper>
+      </ShopItemWrapper>
         );
     }
 }

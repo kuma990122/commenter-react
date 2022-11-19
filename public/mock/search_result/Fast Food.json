@@ -1,0 +1,35 @@
+[
+    {
+        "id": "p-1",
+        "url": "",
+        "pic": "https://media.mcdonalds.hu/storage/61/40/value_menukep-product_list_image.png",
+        "shop": "McDonald's",
+        "star": 50,
+        "price": 1290,
+        "commentQuantity": 12345,
+        "region": "7th District",
+        "category": "Fast Food"
+      },
+      {
+        "id": "p-6",
+        "url": "",
+        "pic": "https://burgerking.hu/sites/burgerking.hu/files/BK_Web_CrispyChicken_500x540px.png",
+        "shop": "Burgur King",
+        "star": 50,
+        "price": 880,
+        "commentQuantity": 1845,
+        "region": "7th District",
+        "category": "Fast Food"
+      },
+      {
+        "id": "p-11",
+        "url": "",
+        "pic": "https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/static/optimized/rev-939cb5a/images/Hungarian-Food-Langos.jpg",
+        "shop": "Best Lángos",
+        "star": 50,
+        "price": 1200,
+        "commentQuantity": 845,
+        "region": "7th District",
+        "category": "Fast Food"
+      }
+]

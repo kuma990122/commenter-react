@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
+import { HeaderWrapper,
+         HeaderBackButton,
+         HeaderTitle,
+         HeaderBox} from './style';
 import './style.css';
 class Header extends Component {
     render() {
-        const { grey, title, onBack } = this.props;
-        const backgroundColor = grey ?'#f0f0f0': '#fff';
+        const {title, onBack } = this.props;
         return (
-            <header className="header" style={{'backgroundColor':backgroundColor }}>
-              <div className="header__back" onClick={onBack}>
+            <HeaderWrapper>
+                <HeaderBox>
+              <HeaderBackButton onClick={onBack}>
                back
-              </div>
-              <div className="header__title">{title}</div>
-            </header>
+              </HeaderBackButton>
+              <HeaderTitle>{title}</HeaderTitle>
+                </HeaderBox>
+            </HeaderWrapper>
         );
     }
 }

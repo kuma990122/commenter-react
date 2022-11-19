@@ -21,7 +21,7 @@
     height: 30px;
     width: 75px;
     font-size: 18px;
-    color: #f63;
+    color: rgb(51, 180, 255);
     font-weight: bold;
   }
   
@@ -86,13 +86,13 @@
   }
   
   .discount__itemCurrentPrice{
-    color: #f63;
+    color: rgb(92, 128, 247);
     text-decoration: none;
     font-size: 20px;
   }
   
   .discount__itemCurrentPrice{
-    color: #f63;
+    color: rgb(92, 128, 247);
     text-decoration: none;
     font-size: 20px;
   }

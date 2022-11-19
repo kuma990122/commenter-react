@@ -1,0 +1,46 @@
+[
+    {
+        "id": "p-4",
+        "url": "",
+        "pic": "https://fridays.hu/wp-content/uploads/2016/05/ribeye_steak.jpg",
+        "shop": "Fridays",
+        "star": 50,
+        "price": 4300,
+        "commentQuantity": 345,
+        "region": "8th District",
+        "category": "meal"
+      },
+      {
+        "id": "p-5",
+        "url": "",
+        "pic": "https://fridays.hu/wp-content/uploads/2016/05/Chicken_fajita-1.jpg",
+        "shop": "Fridays",
+        "star": 50,
+        "price": 2200,
+        "commentQuantity": 312,
+        "region": "8th District",
+        "category": "meal"
+      },
+      {
+        "id": "p-10",
+        "url": "",
+        "pic": "https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/static/optimized/rev-939cb5a/images/Hungarian-Food-Porkolt-Beef-Stew.jpg",
+        "shop": "Ste&k",
+        "star": 50,
+        "price": 2000,
+        "commentQuantity": 312,
+        "region": "8th District",
+        "category": "meal"
+      },
+      {
+        "id": "p-15",
+        "url": "",
+        "pic": "https://p1.meituan.net/deal/a5d9800b5879d596100bfa40ca631396114262.jpg.webp@180w_180h_1e_1c_1l_80q|watermark=0",
+        "shop": "Ciao Italia",
+        "star": 50,
+        "price": 2350,
+        "commentQuantity": 192,
+        "region": "7th District",
+        "category": "meal"
+      }
+]

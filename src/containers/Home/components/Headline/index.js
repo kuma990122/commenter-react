@@ -2,28 +2,34 @@ import React, { Component } from 'react';
 import Slider from "react-slick";
 import { dataSource } from './dataSource';
 import { SliderSettings } from './SliderSettings';
+import { HeadlineWrapper,
+         HeadlineSlider,
+         HeadlineSliderInner,
+         HeadlineSliderTitle,
+         HeadlineSliderImgWrapper,
+         HeadlineSliderImg } from './style';
 import './style.css';
 
 class Headline extends Component {
 
     render() {
         return (
-            <div>
-                <div className="headline__slider">
+            <HeadlineWrapper>
+                <HeadlineSlider>
                    <Slider {...SliderSettings}>
                     {dataSource.map((item,index) =>{
                         return(
-                            <a key={index} className="headline__sliderInner" href={item.url}>
-                            <div className="headline__sliderTitle">{item.title}</div>
-                            <div className="headline__sliderImgWrapper">
-                            <img className="headline__sliderImg" src={item.pic} />
-                            </div>
-                            </a>
+                            <HeadlineSliderInner key={index} href={item.url}>
+                            <HeadlineSliderTitle>{item.title}</HeadlineSliderTitle>
+                            <HeadlineSliderImgWrapper>
+                            <HeadlineSliderImg src={item.pic} />
+                            </HeadlineSliderImgWrapper>
+                            </HeadlineSliderInner>
                         );
                     })}
                    </Slider>
-                </div>
-            </div>
+                </HeadlineSlider>
+            </HeadlineWrapper>
         );
     }
 }

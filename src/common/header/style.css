@@ -4,7 +4,7 @@
     background-color: #f0f0f0;
     padding: 0 10px;
     text-align: center;
-    color: #f63;
+    color: rgb(70, 198, 248);
     position: relative;
     z-index: 300;
     width: 50%;
@@ -21,7 +21,7 @@
   }
   
   .header__back::before {
-    border: #f63 solid 3px;
+    border: rgb(93, 200, 250) solid 3px;
     position: absolute;
     left: 0;
     top: 50%;

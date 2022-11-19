@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import LikeItem from './LikeItem';
 import './style.css';
 import './button.css';
+import { LikelistWrapper,
+         ProductList,
+         ListButton } from './style';
 import Slider from 'react-slick';
 import { SliderSettings } from './SliderSettings';
 
@@ -16,8 +19,8 @@ class LikeList extends Component {
         const {btnClicked} = this.state;
         const {dataSource} = this.props;
         return (
-            <div  className="likeList"> 
-               <div className="likeList__list">
+            <LikelistWrapper> 
+               <ProductList>
                 <Slider {...SliderSettings}>
                   {
                      dataSource.map((item, index) => {
@@ -28,12 +31,9 @@ class LikeList extends Component {
                         }})
                   }
                 </Slider>
-                </div>
-                <div>
-                <button id="more" className="btn-two cyan block" onClick={()=> this.handleBtnClick()}>more</button>
-                </div>
-                
-            </div>
+                </ProductList>
+                <ListButton id='more' onClick={()=> this.handleBtnClick()}>more</ListButton>
+            </LikelistWrapper>
         );
     }
 componentDidUpdate(){

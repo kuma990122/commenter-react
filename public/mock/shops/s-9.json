@@ -9,5 +9,10 @@
     "region": "8th district",
     "category": "Stone steak",
     "address": " Budapest, Október 6. u. 7, 1051",
-    "phone": "+36307191373"
+    "phone": "+36307191373",
+    "tag":[
+      {"tagName":"Japanese Buffet Food"},
+      {"service":"live order tracking"},
+      {"shipping": "free shipping"}
+   ]
   }

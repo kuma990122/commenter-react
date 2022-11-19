@@ -1,4 +1,12 @@
 import React, { Component } from 'react';
+import {RemarkContainer,
+        RemarkHeaderContainer,
+        RemarkHeaderIcon,
+        RemarkListContainer,
+        RemarkListItem,
+        RemarkListItemTitle,
+        RemarkListItemDescription} from './style.js';
+
 import './style.css';
 
 class Remark extends Component {
@@ -8,27 +16,27 @@ class Remark extends Component {
         purchaseNotes
       } = this.props.data;
         return (
-            <div className="remark">
-        <div className="remark__header">
+     <RemarkContainer>
+        <RemarkHeaderContainer>
           Remark
-          <i className="remark__icon" />
-        </div>
-        <div className="remark__list">
-          <dl className="remark__item">
-            <dt className="remark__itemTitle">Validity Period</dt>
-            <dd className="remark__itemDesc">{validityPeriod}</dd>
-          </dl>
+          <RemarkHeaderIcon />
+        </RemarkHeaderContainer>
+        <RemarkListContainer>
+          <RemarkListItem>
+            <RemarkListItemTitle>Validity Period</RemarkListItemTitle>
+            <RemarkListItemDescription>{validityPeriod}</RemarkListItemDescription>
+          </RemarkListItem>
           {purchaseNotes.map((item, index) => {
             return (
-              <dl key={index} className="remark__item">
-                <dt className="remark__itemTitle">{item.title}</dt>
-                <dd className="remark__itemDesc">{item.content}</dd>
-              </dl>
+              <RemarkListItem key={index}>
+                <RemarkListItemTitle>{item.title}</RemarkListItemTitle>
+                <RemarkListItemDescription>{item.content}</RemarkListItemDescription>
+              </RemarkListItem>
             );
           })}
          
-        </div>
-      </div>
+        </RemarkListContainer>
+      </RemarkContainer>
         );
     }
 }

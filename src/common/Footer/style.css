@@ -5,10 +5,10 @@
     padding: 0 10px;
     text-align: center;
     color: #f63;
-    position: relative;
+    position: absolute;
     z-index: 300;
     width: 50%;
-    transform: translate(50%, 0%);
+    transform: translate(50%, 100%);
 
   }
   

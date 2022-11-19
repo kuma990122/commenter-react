@@ -16,4 +16,4 @@ export default reducer;
 export const getShopById = (state, id) => {
     const shop = state.domains.shops[id];
     return shop;
-  };
+};

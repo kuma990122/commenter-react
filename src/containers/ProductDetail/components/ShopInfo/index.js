@@ -1,31 +1,82 @@
 import React, { Component } from 'react';
+import {ShopInfoWrapper,
+        ShopInfoMid,
+        ShopInfoMiddleLeft,
+        ShopInfoName,
+        ShopInfoStarsWrapper,
+        ShopInfoStars,
+        ShopInfoStarScore,
+        ShopInfoSaleDesciption,
+        ShopInfoTag1,
+        ShopInfoTag2,
+        ShopInfoTagText,
+        ShopInfoTagList,
+        ShopInfoTag3,
+        ShopInfoPhoneIconWrapper,
+        ShopInfoBreakline,
+        ShopInfoMiddleRight,
+        ShopInfoPhoneIcon,
+        ShopInfoBottom,
+        ShopInfoLocation,
+        ShopInfoDeliveryContainer,
+        ShopInfoDeliveryTitle,
+        ShopInfoDeliveryContent,
+       
+        } from './style.js';
+
 import './style.css'
 class ShopInfo extends Component {
     render() {
         const { data: relatedShop } = this.props;
-        const {shop: name, star, address, phone} = relatedShop;
+        const { saleDesc } = this.props.productData;
+        const { shop: name, star, address, phone, tag , region} = relatedShop;
         return (
-            <div className="shopInfo">
-        <div className="shopInfo__middle">
-          <div className="shopInfo__middleLeft">
-            <div className="shopInfo__shopName">
-            {name}
-            </div>
-            <div className="shopInfo__starsWrapper">
-              <span className="shopInfo__stars">
-              <i className="shopInfo__stars--red" style={{"width": 2*star+"%"}}></i>
-              </span>
-              <span className="shopInfo__distance">100km</span>
-            </div>
-          </div>
-          <a className="shopInfo__middleRight" href={`tel://${phone}`}>
-            <i className="shopInfo__phoneIcon"></i>
-          </a>
-        </div>
-        <div className="shopInfo__bottom">
-          <i className="shopInfo__locationIcon" />{address}
-        </div>
-      </div>
+            <ShopInfoWrapper>
+        <ShopInfoMid>
+          <ShopInfoMiddleLeft>
+            <ShopInfoName>
+            {name}   {region}
+            </ShopInfoName>
+            <ShopInfoStarsWrapper>
+              <ShopInfoStars></ShopInfoStars>
+              <ShopInfoStarScore>{star/10} /5</ShopInfoStarScore>
+              <ShopInfoSaleDesciption>({saleDesc})</ShopInfoSaleDesciption>
+              
+                {tag.map((item,index)=>{
+                  return(
+                    <ShopInfoTagList key={index}>
+                    <ShopInfoTag1 >
+                    <ShopInfoTagText>{item.tagName}</ShopInfoTagText>  
+                    </ShopInfoTag1>
+                    <ShopInfoTag2>
+                      <ShopInfoTagText>{item.service}</ShopInfoTagText>  
+                    </ShopInfoTag2>
+                    <ShopInfoTag3>
+                    <ShopInfoTagText>{item.shipping}</ShopInfoTagText>
+                    </ShopInfoTag3>
+                    </ShopInfoTagList>
+                  )
+                })}
+              
+            </ShopInfoStarsWrapper>
+          </ShopInfoMiddleLeft>
+          <ShopInfoMiddleRight href={`tel://${phone}`}>
+            <ShopInfoPhoneIconWrapper>
+            <ShopInfoPhoneIcon></ShopInfoPhoneIcon>
+            </ShopInfoPhoneIconWrapper>
+          </ShopInfoMiddleRight>
+        </ShopInfoMid>
+        <ShopInfoBreakline/>
+        <ShopInfoBottom>
+          <ShopInfoLocation/>{address}
+        </ShopInfoBottom>
+        <ShopInfoBreakline/>
+        <ShopInfoDeliveryContainer>
+           <ShopInfoDeliveryTitle>DELIVERY UP TO HUF 0</ShopInfoDeliveryTitle>
+           <ShopInfoDeliveryContent>For purchases over HUF 6,500, we provide free delivery!</ShopInfoDeliveryContent>
+         </ShopInfoDeliveryContainer>
+         <ShopInfoBreakline/>
+      </ShopInfoWrapper>
         );
     }
 }

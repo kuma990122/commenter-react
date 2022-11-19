@@ -1,36 +1,48 @@
 import React, { Component } from 'react';
 import './style.css';
+import {SearchWrapper,
+        SearchContainer,
+        SearchInput,
+        SearchClear,
+        SearchCancel,
+        SearchSuggest,
+        SearchList,
+        SearchItem,
+        SearchItemKeyword,
+        SearchItemQuantity} from './style.js';
 
 class SearchBox extends Component {
     
     render() {
         const {inputText, searchKeywords} = this.props;
         return (
-            <div className='searchBox'>
-                <div className='searchBox__container'>
-                    <input className='searchBox__text' value = {inputText} onChange={this.handleInputChange}/>
-                    <span className='searchBox__clear' onClick = {this.handleInputClear}></span>
-                    <span className='searchBox__cancel'onClick = {this.handleCancleEvent}>Cancel</span> 
-                </div>
+            <SearchWrapper>
+                <SearchContainer>
+                    <SearchInput value = {inputText} onChange={this.handleInputChange}/>
+                    <SearchClear onClick = {this.handleInputClear}></SearchClear>
+                    <SearchCancel onClick = {this.handleCancleEvent}>Cancel</SearchCancel> 
+                </SearchContainer>
                 {this.props.searchKeywords.length > 0 ? this.ListSuggestions() :null}
-            </div>
+            </SearchWrapper>
         );
     }
 
     ListSuggestions(){
         return(
-            <ul>
+            <SearchList>
+                <SearchSuggest>You may interested in :</SearchSuggest>
                 {
                    this.props.searchKeywords.map(item => {
                     return (
-                    <li key={item.id} className='searchBox__item' onClick={this.handleClickItem.bind(this, item)}>
-                        <span className='searchBox__itemKeyword'>{item.keyword}</span>
-                        <span className='searchBox__itemQuantity'>with {item.quantity} results</span>
-                    </li>
+                    <SearchItem key={item.id} onClick={this.handleClickItem.bind(this, item)}>
+                        <SearchItemKeyword>{item.keyword}</SearchItemKeyword>
+                        <SearchItemQuantity>with {item.quantity} results</SearchItemQuantity>
+                        <br />
+                    </SearchItem>
                     )
                    })
                 }
-            </ul>
+            </SearchList>
         )
     }
 

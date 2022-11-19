@@ -1,49 +1,51 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import './style.css'
+import {ProductOverviewWrapper,
+        ProductOverviewHeaderContainer,
+        ProductOverviewImgContainer,
+        ProductOverviewImg,
+        ProductOverviewInfo,
+        ProductOverviewTitle,
+        ProductOverviewContent,
+        ProductOverviewPurchaseContainer,
+        ProductOverviewCurrentPrice,
+        ProductOverviewPriceSymbol,
+        ProductOverviewOldPrice,
+        ProductOverviewPurchaseBtn,
+        ProductOverviewBreakline} from './style.js';
+        
+import './style.css';
 class ProductOverview extends Component {
     render() {
       const { 
         id, 
-        shop, 
         picture, 
         description, 
         currentPrice, 
-        oldPrice} = this.props.data;
+        oldPrice,
+        product
+        } = this.props.data;
         return (
-        <div className="productOverview">
-        <div className="productOverview__header">
-          <div className="productOverview__imgContainer">
-            <img
-              alt=""
-              className="productOverview__img"
-              src={picture}
-            />
-          </div>
-          <div className="productOverview__baseInfo">
-            <div className="productOverview__title">{shop}</div>
-            <div className="productOverview__content">
+        <ProductOverviewWrapper>
+        <ProductOverviewHeaderContainer>
+          <ProductOverviewImgContainer>
+            <ProductOverviewImg src={picture} />
+          </ProductOverviewImgContainer>
+          <ProductOverviewInfo>
+            <ProductOverviewTitle>{product}</ProductOverviewTitle>
+            <ProductOverviewContent>
               {description}
-            </div>
-          </div>
-        </div>
-        <div className="productOverview__purchase">
-          <span className="productOverview__price">{currentPrice}</span>
-          <span className="productOverview__symbol">Ft</span>
-          <span className="productOverview__price--old">{oldPrice}Ft</span>
-          <Link className="productOverview__btn" to={`/purchase/${id}`}>Purchase Now</Link>
-        </div>
-        <ul className="productOverview__remark">
-          <li className="productOverview__remarkItem">
-            <i className="productOverview__sign1" />
-            <span className="productOverview__desc">Refund anytime</span>
-          </li>
-          <li className="productOverview__remarkItem">
-            <i className="productOverview__sign2" />
-            <span className="productOverview__desc">Refunding after expiring</span>
-          </li>
-        </ul>
-      </div>
+            </ProductOverviewContent>
+          </ProductOverviewInfo>
+        </ProductOverviewHeaderContainer>
+        <ProductOverviewPurchaseContainer>
+          <ProductOverviewCurrentPrice>{currentPrice}</ProductOverviewCurrentPrice>
+          <ProductOverviewPriceSymbol>Ft</ProductOverviewPriceSymbol>
+          <ProductOverviewOldPrice>{oldPrice}Ft</ProductOverviewOldPrice>
+          <ProductOverviewPurchaseBtn to={`/purchase/${id}`}>Purchase Now</ProductOverviewPurchaseBtn>
+          
+        </ProductOverviewPurchaseContainer>
+        <ProductOverviewBreakline/>
+      </ProductOverviewWrapper>
         );
     }
 }

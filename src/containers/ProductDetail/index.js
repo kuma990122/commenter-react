@@ -17,7 +17,7 @@ class ProductDetail extends Component {
             <div>
                 <Header title="Detail info" onBack={this.handleBack} grey />
                 {product && <ProductOverview data={product}/>}
-                {relatedShop && <ShopInfo data={relatedShop}/>}
+                {relatedShop && <ShopInfo data={relatedShop} productData={product}/>}
                 {product && <Detail data={product}/>}
                 {product && <Remark data={product}/>}
                 {product && <PurchaseButton productId={product.id} />}
@@ -32,6 +32,7 @@ class ProductDetail extends Component {
         }else if (!this.props.relatedShop) {
             this.props.detailActions.loadShopById(product.nearestShop);
           }
+        console.log(product,"Product INFO");
     }
     
     componentDidUpdate(preProps){
