@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { FooterWrapper,
          FooterBox,
          FooterTitle } from './style';
-import './style.css'
 class Footer extends Component {
     render() {
         const {title, onBack } = this.props;

@@ -8,7 +8,6 @@ import { HeadlineWrapper,
          HeadlineSliderTitle,
          HeadlineSliderImgWrapper,
          HeadlineSliderImg } from './style';
-import './style.css';
 
 class Headline extends Component {
 

@@ -1,31 +1,31 @@
-import { FETCH_DATA } from "../../middleware/api";
-import { schema as shopSchema ,getShopById} from "../domains/shops";
+import { API_DATA } from "../../middleware/api";
+import { transformationalSchema as shopSchema ,getShopById} from "../domains/shops";
 import * as constants from "./constants";
-import { schema as productSchema, getProductDetail} from "../domains/products";
+import { transformationalSchema as productSchema, getProductDetail} from "../domains/products";
 import url from "../../../utils/url";
 
-const fetchProductDetail = (endpoint, id) => ({
-    [FETCH_DATA]: {
+const fetchProductDetail = (finalUrl, id) => ({
+    [API_DATA]: {
         types: [
           constants.FETCH_PRODUCT_DETAIL_REQUEST,
           constants.FETCH_PRODUCT_DETAIL_SUCCESS,
           constants.FETCH_PRODUCT_DETAIL_FAILURE,
         ],
-        endpoint,
-        schema: productSchema
+        finalUrl,
+        transformationalSchema: productSchema
       },
       id
 })
 
-const fetchShopById = (endpoint, id) => ({
-    [FETCH_DATA]: {
+const fetchShopById = (finalUrl, id) => ({
+    [API_DATA]: {
         types: [
           constants.FETCH_SHOP_REQUEST,
           constants.FETCH_SHOP_SUCCESS,
           constants.FETCH_SHOP_FAILURE,
         ],
-        endpoint,
-        schema: shopSchema
+        finalUrl,
+        transformationalSchema: shopSchema
       },
       id
 })
@@ -36,8 +36,8 @@ export const loadProductDetail = (id) =>{
       if(product) {
         return dispatch(fetchProductDetailSuccess(id))
       }
-    const endpoint = url.getProductDetail(id);
-    return dispatch(fetchProductDetail(endpoint,id));
+    const finalUrl = url.getProductDetail(id);
+    return dispatch(fetchProductDetail(finalUrl,id));
    }
 }
 
@@ -47,8 +47,8 @@ export const loadShopById = (id) =>{
           if(shop) {
             return dispatch(fetchShopSuccess(id))
           }
-        const endpoint = url.getShopById(id);
-        return dispatch(fetchShopById(endpoint,id));
+        const finalUrl = url.getShopById(id);
+        return dispatch(fetchShopById(finalUrl,id));
        }
 }
 

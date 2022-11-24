@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { ShoppingListWrapper,
          ShoppingL1st,
          ShoppingListBreaker } from './style';
-import './style.css';
 import ShoppingItem from '../ShoppingItem'; 
 
 

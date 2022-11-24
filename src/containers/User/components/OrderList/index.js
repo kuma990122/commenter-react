@@ -4,8 +4,6 @@ import { OrderItemListWrapper,
          OrderItemL1st } from './style.js';
 import OrderItem from '../OrderItem';
 
-import './style.css';
-
 class OrderList extends Component {
     render() {
         return (

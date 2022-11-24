@@ -7,7 +7,6 @@ import {RemarkContainer,
         RemarkListItemTitle,
         RemarkListItemDescription} from './style.js';
 
-import './style.css';
 
 class Remark extends Component {
     render() {

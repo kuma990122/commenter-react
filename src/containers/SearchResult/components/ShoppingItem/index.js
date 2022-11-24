@@ -10,7 +10,7 @@ import { ShopItemWrapper,
          ShopItemInfoContainer,
          ShopItemRegion,
          ShopItemCategory } from './style.js';
-import './style.css'
+
 
 class ShoppingItem extends Component {
     render() {
@@ -31,7 +31,6 @@ class ShoppingItem extends Component {
         <ShopItemContentWrapper>
           <ShopItemTitle>{shop}</ShopItemTitle>
           <ShopItemComment>
-            <span className={"shopItem__star shopItem__star--" + star} />
             <ShopItemQuantity>{quantity}</ShopItemQuantity>
             <ShopItemPrice>{price}/person</ShopItemPrice>
           </ShopItemComment>

@@ -1,17 +1,17 @@
 import * as constants from './constants';
 import url from '../../../utils/url';
-import { FETCH_DATA } from '../../middleware/api';
-import { schema as searchSchema} from '../domains/keywords';
+import { API_DATA } from '../../middleware/api';
+import { transformationalSchema as searchSchema} from '../domains/keywords';
 
-const fetchSearchKeywords = (text, endpoint) => ({
-    [FETCH_DATA]:{
+const fetchSearchKeywords = (text, finalUrl) => ({
+    [API_DATA]:{
         types:[
             constants.FETCH_INPUT_KEYWORDS_REQUEST,
             constants.FETCH_INPUT_KEYWORDS_SUCCESS,
             constants.FETCH_INPUT_KEYWORDS_FAILURE
         ],
-        endpoint,
-        schema: searchSchema
+        finalUrl,
+        transformationalSchema: searchSchema
     },
     text
 })
@@ -22,8 +22,8 @@ export const loadKeywordsList =(text) =>{
         if(keywordsList[text]){
             return keywordsList[text];
         }
-        const endpoint = url.getSearchKeywords(text);
-        return dispatch(fetchSearchKeywords(text, endpoint))
+        const finalUrl = url.getSearchKeywords(text);
+        return dispatch(fetchSearchKeywords(text, finalUrl))
     }
 }
 

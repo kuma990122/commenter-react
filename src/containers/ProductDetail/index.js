@@ -9,18 +9,19 @@ import ShopInfo from './components/ShopInfo';
 import Header from '../../common/Header';
 import { loadProductDetail, loadShopById} from '../../redux/reducers/detail/actionCreators';
 import { getProduct, getShop } from '../../redux/reducers/detail/selectors';
+import { getLoginStatus } from '../../redux/reducers/login/selectors';
 
 class ProductDetail extends Component {
     render() {
-        const {product, relatedShop} =this.props;
+        const {product, relatedShop,loginStatus} =this.props;
         return (
             <div>
                 <Header title="Detail info" onBack={this.handleBack} grey />
-                {product && <ProductOverview data={product}/>}
+                {product && <ProductOverview data={product} loginStatus={loginStatus}/>}
                 {relatedShop && <ShopInfo data={relatedShop} productData={product}/>}
                 {product && <Detail data={product}/>}
                 {product && <Remark data={product}/>}
-                {product && <PurchaseButton productId={product.id} />}
+                {product && <PurchaseButton productId={product.id} loginStatus={loginStatus}/>}
             </div>
         );
     }
@@ -51,7 +52,8 @@ const mapStateToProps = (state, props) =>{
     const productId = props.match.params.id;
     return {
         product: getProduct(state, productId),
-        relatedShop: getShop(state, productId)
+        relatedShop: getShop(state, productId),
+        loginStatus: getLoginStatus(state)
     };
 }
 

@@ -7,7 +7,6 @@ import { OrderItemWrapper,
          OrderItemAmount,
          OrderItemPrice,
          OrderItemCheckDetail } from './style';
-import './style.css';
 
 
 class OrderItem extends Component {

@@ -5,7 +5,6 @@ import { HomeHeaderWrapper,
          HomeHeaderLink,
          HomeHeaderUser,
          HomeHeaderUserPic } from './style';  
-import './style.css'
 
 class HomeHeader extends Component {
     render() {

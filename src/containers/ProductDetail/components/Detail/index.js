@@ -13,7 +13,7 @@ import { DetailWrapper,
          DetailMore,
          DetailNotice,
          DetailArrow } from './style';
-import './style.css';
+
 class Detail extends Component {
     render() {
       const {

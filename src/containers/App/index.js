@@ -5,12 +5,13 @@ import ErrorDisplay from '../../common/ErrorDisplay';
 import { actions as appActions} from '../../redux/reducers/app/actionCreators';
 import { getError } from '../../redux/reducers/app/reducer';
 import { connect } from "react-redux";
-import './style.css';
 import Home from '../Home';
 import ProductDetail from '../ProductDetail';
 import Search from '../Search';
 import SearchResult from '../SearchResult';
 import User from '../User';
+import Purchase from '../Purchase';
+import Success from '../Success';
 
 
 class App extends Component {
@@ -25,6 +26,8 @@ class App extends Component {
           <Route path="/search" component={Search}/>
           <Route path="/search_result" component={SearchResult}/>
           <Route path="/user" component={User}/>
+          <Route path="/purchase/:id" component={Purchase}/>
+          <Route path="/success" component={Success}/>
           <Route path="/" component={Home} />
        </Switch>
       </Router>

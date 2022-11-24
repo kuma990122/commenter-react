@@ -1,4 +1,4 @@
-export const schema = {
+export const transformationalSchema = {
     name: 'keywords',
     id: 'id'
 }

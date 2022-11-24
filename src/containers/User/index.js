@@ -40,7 +40,7 @@ class User extends Component {
     }
 
     handleBack = () => {
-        this.props.history.goBack();
+        this.props.history.push('/');
     };
 }
 

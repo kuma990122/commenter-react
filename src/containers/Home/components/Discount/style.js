@@ -10,7 +10,7 @@ export const DiscountWrapper = styled.div`
     transform: translate(50%, 0%);
 `
 
-export const DiscountHeader = styled.a`
+export const DiscountHeader = styled.span`
     display: block;
     position: relative;
     height: 32px;
@@ -19,7 +19,7 @@ export const DiscountHeader = styled.a`
     padding-left: 3px;
 `
 
-export const DiscountTitle = styled.text`
+export const DiscountTitle = styled.span`
     font-weight: 700;
     height: 30px;
     width: 20%;

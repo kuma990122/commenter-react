@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import LikeItem from './LikeItem';
-import './style.css';
-import './button.css';
 import { LikelistWrapper,
          ProductList,
          ListButton } from './style';

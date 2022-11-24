@@ -11,7 +11,6 @@ import { LikeItemWrapper,
          LikeItemCurrentPrice,
          LikeItemOldPrice,
          LikeItemSale } from './style';
-import './style.css';
 class LikeItem extends Component {
     render() {
         const {

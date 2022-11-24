@@ -3,7 +3,7 @@ import { HeaderWrapper,
          HeaderBackButton,
          HeaderTitle,
          HeaderBox} from './style';
-import './style.css';
+
 class Header extends Component {
     render() {
         const {title, onBack } = this.props;

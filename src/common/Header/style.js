@@ -9,7 +9,7 @@ export const HeaderWrapper = styled.header`
     width: 50%;
     transform: translate(50%, 0%);
     background: linear-gradient(70deg, aqua, 50%, deeppink);
-    border-radius:14px;
+    
     
 `
 export const HeaderBox = styled.div`
@@ -17,7 +17,6 @@ export const HeaderBox = styled.div`
     height: 100%;
     background: linear-gradient(to right, #b8e2ef, #f7bee0);
     border: 4px solid transparent;
-    border-radius:16px;
     background-clip: padding-box;
     z-index: 0;
 `

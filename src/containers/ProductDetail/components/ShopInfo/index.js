@@ -23,8 +23,6 @@ import {ShopInfoWrapper,
         ShopInfoDeliveryContent,
        
         } from './style.js';
-
-import './style.css'
 class ShopInfo extends Component {
     render() {
         const { data: relatedShop } = this.props;

@@ -6,7 +6,6 @@ import { CategoryWrapper,
          CategorySection,
          CategoryIcon,
          CategoryText } from './style.js';
-import './style.css';
 import {SliderSettings} from './SliderSettings';
 
 //On category component we import Slider package to achieve some animation effects
