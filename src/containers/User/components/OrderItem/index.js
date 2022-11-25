@@ -11,22 +11,21 @@ import { OrderItemWrapper,
 
 class OrderItem extends Component {
     render() {
-        const{
-            id,
+        const {
+            picture,
+            title,
             shop,
-            product,
-            price,
-            amount,
-            pic
-        } = this.props.data
+            currentPrice,
+            id
+        } = this.props.data;
         return (
             <OrderItemWrapper>
-                <OrderItemPic style= {{ backgroundImage: "url(" + pic +")"}}/>
+                <OrderItemPic src={picture}/>
                 <OrderItemContentWrapper>
                     <OrderItemShop>Shop:{shop}</OrderItemShop>
-                    <OrderItemName>{product}</OrderItemName>
-                    <OrderItemAmount>Amount:{amount}</OrderItemAmount>
-                    <OrderItemPrice>{price}HUF</OrderItemPrice>
+                    <OrderItemName>{title}</OrderItemName>
+                    <OrderItemAmount>Amount:</OrderItemAmount>
+                    <OrderItemPrice>{currentPrice}HUF</OrderItemPrice>
                 </OrderItemContentWrapper>
                 <OrderItemCheckDetail to={`/detail/${id}`}>Product Info</OrderItemCheckDetail>
             </OrderItemWrapper>

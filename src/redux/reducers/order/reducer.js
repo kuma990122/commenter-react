@@ -2,7 +2,7 @@ import * as constants from './constants';
 
 const defaultState ={
     isFetching: false,
-    id: null
+    ids:[]
 }
 
 const orderReducer = (state = defaultState, action) =>{
@@ -11,7 +11,7 @@ const orderReducer = (state = defaultState, action) =>{
     }
     if(action.type === constants.FETCH_ORDER_SUCCESS){
         console.log(action.id);
-        return {...state, id: action.id , isFetching : false }
+        return {...state, ids: state.ids.concat(action.response.ids) , isFetching : false }
     }
     if(action.type === constants.FETCH_ORDER_FAILURE){
         return {...state, isFetching: false, id:null}

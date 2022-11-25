@@ -8,6 +8,7 @@ import {reducer as SearchReducer} from "./search";
 import {reducer as SearchResultReducer} from "./searchResult";
 import {reducer as LoginReducer} from "./login";
 import {reducer as OrderReducer} from "./order";
+import {reducer as UserOrderReducer} from "./user";
 
 const rootReducer = combineReducers({
     domains,
@@ -17,7 +18,8 @@ const rootReducer = combineReducers({
     SearchReducer,
     SearchResultReducer,
     LoginReducer,
-    OrderReducer
+    OrderReducer,
+    UserOrderReducer
 })
 
 export default rootReducer;

@@ -3,12 +3,14 @@ import OrderList from './components/OrderList';
 import Header from '../../common/Header';
 import { connect } from 'react-redux';
 import { getLoginStatus } from '../../redux/reducers/login/selectors';
+import { getUserOrders } from '../../redux/reducers/user/selectors';
 import { LoginBox, LoginButton, LoginInput, LoginWrapper } from './style';
 import { login } from '../../redux/reducers/login/actionCreators'; 
 import { bindActionCreators } from 'redux';
 class User extends Component {
     render() {
-        if(!this.props.loginStatus){
+        const {loginStatus,userOrders} = this.props
+        if(!loginStatus){
             return (
                 <LoginWrapper>
                     <Header title="Please Log in" onBack={this.handleBack} grey />
@@ -27,7 +29,7 @@ class User extends Component {
                 <Header title="User Orders" onBack={this.handleBack} grey />
             </div>
             <div className='userPage'>
-                <OrderList/>
+                <OrderList data={userOrders}/>
             </div>
             </div>
             )
@@ -37,6 +39,7 @@ class User extends Component {
 
     handleLogin = () =>{
         this.props.login(this.account,this.password);
+        this.props.history.push('/');
     }
 
     handleBack = () => {
@@ -46,7 +49,8 @@ class User extends Component {
 
 const mapStateToProps = (state, props) =>{
     return{
-          loginStatus: getLoginStatus(state)
+          loginStatus: getLoginStatus(state),
+          userOrders:getUserOrders(state)
     }
 }
 

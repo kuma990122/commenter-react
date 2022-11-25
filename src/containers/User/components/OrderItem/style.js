@@ -5,10 +5,11 @@ export const OrderItemWrapper = styled.div`
     display: flex;
     padding: 10px;
 `
-export const OrderItemPic = styled.div`
+export const OrderItemPic = styled.img`
+    width: 90px;
+    vertical-align: center;
+    object-fit: cover;
     border-radius: 5px;
-    width: 66px;
-    height: 66px;
     margin-right: 10px;
     background-position: center;
     background-size: 100% 100%;

@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { loadProductById } from '../../redux/reducers/order/actionCreators'; 
 import { getOrder } from '../../redux/reducers/order/selectors';
 import { bindActionCreators } from 'redux';
+import { loadUserOrderById } from '../../redux/reducers/user/actionCreators';
 
 class Purchase extends Component {
     render() {
@@ -12,7 +13,7 @@ class Purchase extends Component {
         return (
             <div>
                 <Header title="Purchase Info" onBack={this.handleBack}/>
-                {order&&<PurchaseItem data={order}/>}
+                {order&&<PurchaseItem data={order} onSubmitClick={this.handleSubmitClick}/>}
             </div>
         );
     }
@@ -27,6 +28,13 @@ class Purchase extends Component {
     handleBack = () => {
         this.props.history.push('/');
     };
+
+    handleSubmitClick =(amount) =>{
+        const orderId = this.props.match.params.id;
+        console.log('Order '+ orderId);
+        this.props.loadOrderToUser(orderId,amount);
+        console.log('it submitted');
+    }
 }
 
 const mapStateToProps = (state, props) =>{
@@ -38,7 +46,8 @@ const mapStateToProps = (state, props) =>{
 
 const mapDispatchToProps = dispatch => {
     return {
-        loadOrder: bindActionCreators(loadProductById,dispatch)
+        loadOrder: bindActionCreators(loadProductById,dispatch),
+        loadOrderToUser: bindActionCreators(loadUserOrderById,dispatch)
     };
 }
 

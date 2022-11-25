@@ -6,13 +6,14 @@ import OrderItem from '../OrderItem';
 
 class OrderList extends Component {
     render() {
+        const {data} = this.props;
         return (
             <OrderItemListWrapper>
                 <OrderItemL1st>
                     {
-                        dataSource.map((item, index) =>{
+                        data.map((item, index) =>{
                             return (
-                                <div key={item.itemId}>
+                                <div key={index}>
                                     <OrderItem data={item} />
                                 </div>
                             )

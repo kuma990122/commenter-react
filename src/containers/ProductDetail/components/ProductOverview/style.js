@@ -13,6 +13,7 @@ export const ProductOverviewHeaderContainer = styled.div`
 
 export const ProductOverviewImgContainer = styled.div`
     min-height: 100px;
+    max-height: 300px;
     overflow: hidden;
     width: 50%;
     transform: translate(50%, 0%);

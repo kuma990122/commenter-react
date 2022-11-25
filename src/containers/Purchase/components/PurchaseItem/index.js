@@ -34,7 +34,6 @@ class PurchaseItem extends Component {
             currentPrice,
             oldPrice,
         } = this.props.data;
-
         
         return (
             <PurchaseItemWrapper>
@@ -67,7 +66,7 @@ class PurchaseItem extends Component {
                 </PurchaseAmountContainer>
                 <PurchaseItemBreakline/>
                 <PurchaseItemSubmitBtnContainer>
-                    <PurchaseItemSubmitButton to={`/success`}>Submit Order</PurchaseItemSubmitButton>
+                    <PurchaseItemSubmitButton to={`/success`} onClick={this.handleSubmitClick}>Submit Order</PurchaseItemSubmitButton>
                 </PurchaseItemSubmitBtnContainer>    
                 </PurchaseItemInfoContainer>
                 <PurchaseItemBreakline/>
@@ -87,6 +86,10 @@ class PurchaseItem extends Component {
         this.setState({
             count: this.state.count+1
         })
+    }
+
+    handleSubmitClick = () =>{
+        this.props.onSubmitClick(this.state.count);
     }
 }
 

@@ -23,7 +23,8 @@ class Home extends Component {
         );
     }
     componentDidMount(){
-        this.props.LoadDiscounts()
+            this.props.LoadDiscounts()
+        
     }
 
     fetchMoreData = () =>{
