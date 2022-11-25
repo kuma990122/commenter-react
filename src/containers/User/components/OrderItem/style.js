@@ -7,6 +7,8 @@ export const OrderItemWrapper = styled.div`
 `
 export const OrderItemPic = styled.img`
     width: 90px;
+    height: 90px;
+    overflow: hidden;
     vertical-align: center;
     object-fit: cover;
     border-radius: 5px;
